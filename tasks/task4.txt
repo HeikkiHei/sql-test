@@ -19,7 +19,7 @@ Bambi
 TEST
 INSERT INTO Movies (name,year) VALUES ('Pinocchio',1940);
 INSERT INTO Movies (name,year) VALUES ('Dumbo',1941);
-INSERT INTO Movies (name,year) VALUES ('Tuhkimo',1950);
+INSERT INTO Movies (name,year) VALUES ('Cinderella',1950);
 INSERT INTO Movies (name,year) VALUES ('Aladdin',1992);
 
 RESULT

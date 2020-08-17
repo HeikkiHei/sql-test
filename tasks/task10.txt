@@ -23,7 +23,7 @@ Pinocchio|1940
 Snow White|1937
 
 TEST
-INSERT INTO Movies (name,year) VALUES ('Tuhkimo',1950);
+INSERT INTO Movies (name,year) VALUES ('Cinderella',1950);
 INSERT INTO Movies (name,year) VALUES ('Peter Pan',1953);
 INSERT INTO Movies (name,year) VALUES ('Aristocats',1970);
 INSERT INTO Movies (name,year) VALUES ('Black Cauldron',1985);
@@ -32,7 +32,7 @@ RESULT
 Black Cauldron|1985
 Aristocats|1970
 Peter Pan|1953
-Tuhkimo|1950
+Cinderella|1950
 
 TEST
 INSERT INTO Movies (name,year) VALUES ('A',2000);

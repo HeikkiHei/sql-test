@@ -1,5 +1,5 @@
 TASK
-Hae ennen vuotta 1950 tai vuoden 1980 jälkeen julkaistujen elokuvien nimet.
+Get the names of the movies publised before 1950 and after 1980.
 
 TABLES
 CREATE TABLE Movies (id INTEGER PRIMARY KEY, name TEXT, year INTEGER);
@@ -20,7 +20,7 @@ Black Cauldron
 TEST
 INSERT INTO Movies (name,year) VALUES ('Pinocchio',1940);
 INSERT INTO Movies (name,year) VALUES ('Dumbo',1941);
-INSERT INTO Movies (name,year) VALUES ('Tuhkimo',1950);
+INSERT INTO Movies (name,year) VALUES ('Cinderella',1950);
 INSERT INTO Movies (name,year) VALUES ('Aladdin',1992);
 
 RESULT

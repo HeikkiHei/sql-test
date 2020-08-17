@@ -17,11 +17,11 @@ RESULT
 Bambi
 Dumbo
 Fantasia
-Snow White
 Pinocchio
+Snow White
 
 TEST
-INSERT INTO Movies (name,year) VALUES ('Tuhkimo',1950);
+INSERT INTO Movies (name,year) VALUES ('Cinderella',1950);
 INSERT INTO Movies (name,year) VALUES ('Peter Pan',1953);
 INSERT INTO Movies (name,year) VALUES ('Aristocats',1970);
 INSERT INTO Movies (name,year) VALUES ('Black Cauldron',1985);
@@ -29,5 +29,5 @@ INSERT INTO Movies (name,year) VALUES ('Black Cauldron',1985);
 RESULT
 Aristocats
 Black Cauldron
+Cinderella
 Peter Pan
-Tuhkimo

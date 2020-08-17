@@ -19,13 +19,13 @@ Dumbo|1941
 Bambi|1942
 
 TEST
-INSERT INTO Movies (name,year) VALUES ('Tuhkimo',1950);
+INSERT INTO Movies (name,year) VALUES ('Cinderella',1950);
 INSERT INTO Movies (name,year) VALUES ('Peter Pan',1953);
 INSERT INTO Movies (name,year) VALUES ('Aristocats',1970);
 INSERT INTO Movies (name,year) VALUES ('Black Cauldron',1985);
 
 RESULT
-Tuhkimo|1950
+Cinderella|1950
 Peter Pan|1953
 Aristocats|1970
 Black Cauldron|1985
