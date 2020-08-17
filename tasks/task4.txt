@@ -1,5 +1,5 @@
 TASK
-Hae ennen vuotta 1950 julkaistujen elokuvien nimet.
+Get the names of all the movies published before 1950.
 
 TABLES
 CREATE TABLE Movies (id INTEGER PRIMARY KEY, name TEXT, year INTEGER);

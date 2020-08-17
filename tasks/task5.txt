@@ -1,5 +1,5 @@
 TASK
-Hae yearna 1940–1950 julkaistujen elokuvien nimet.
+Get the names of the movies published between 1940 and 1950.
 
 TABLES
 CREATE TABLE Movies (id INTEGER PRIMARY KEY, name TEXT, year INTEGER);

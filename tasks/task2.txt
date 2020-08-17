@@ -1,5 +1,5 @@
 TASK
-Hae kaikkien elokuvien nimet ja julkaisuvuodet.
+Get names and publication years for all movies.
 
 TABLES
 CREATE TABLE Movies (id INTEGER PRIMARY KEY, name TEXT, year INTEGER);
