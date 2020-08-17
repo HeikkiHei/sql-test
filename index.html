@@ -15,15 +15,15 @@ textarea {font-family:monospace}
 <div>
 <h2>Tehtävä <span id="which"></span></h2>
 <p id="task"></p>
-<h2>Esimerkki</h2>
+<h2>Example</h2>
 <div id="example"></div>
 </fieldset>
 <div id="model"></div>
-<h2>Lähetä vastaus</h2>
-Kysely:<br>
+<h2>Send answer</h2>
+Query:<br>
 <textarea rows=5 style="width:100%" id=query></textarea>
 <br><br>
-<button id="submit" onclick="check();">Tarkasta</button>
+<button id="submit" onclick="check();">Submit</button>
 <span id="message"></span>
 <div id="verdict"></div>
 </td><td width=20></td><td>
@@ -48,7 +48,7 @@ function sql_run(context,query,what) {
         try {
             db.run(context);
         } catch(error) {
-            alert("Virhe tehtävän määrittelyssä");
+            alert("Error in exercise definition");
         }
         try {
             var result = db.exec(query);
@@ -63,7 +63,7 @@ function render_table(data,name) {
     if (data.length == 0) {
         var table = "";
         table += "<i>"+name+"</i>";
-        table += "<table border><tr><td>(taulu on tyhjä)</td></tr></table>";
+        table += "<table border><tr><td>(table is empty)</td></tr></table>";
         return table;
     }
     data = data[0];
@@ -173,7 +173,7 @@ function sql_result(result,what) {
                 var html = "";
                 html += render_tables(table_data[0]);
                 html += "<br>";
-                html += render_result(results[0],"Haluttu tulos");
+                html += render_result(results[0],"Desired result");
                 get("example").innerHTML = html;
             }
             my_table = 0;
@@ -190,17 +190,17 @@ function sql_result(result,what) {
         var plain = render_plain(result);
         var correct = same(results[what[1]],plain);
         if (!correct) all_correct = false;
-        var message = correct ? "<font color=green>oikein</font>" : "<font color=red>väärin</font>";
-        verdict.innerHTML += "<h2>Testi "+(what[1]+1)+" ("+message+")</h2>";
+        var message = correct ? "<font color=green>correct</font>" : "<font color=red>incorrect</font>";
+        verdict.innerHTML += "<h2>Test "+(what[1]+1)+" ("+message+")</h2>";
         verdict.innerHTML += render_tables(table_data[what[1]]);
-        verdict.innerHTML += render_result(results[what[1]],"Haluttu tulos");
+        verdict.innerHTML += render_result(results[what[1]],"Desired result");
         var columns = result[0] == undefined ? undefined : result[0].columns;
-        verdict.innerHTML += render_result(plain,"Kyselysi tulos",columns);
+        verdict.innerHTML += render_result(plain,"Query result",columns);
         my_test++;
         if (my_test < tests.length) {
             check_test();
         } else {
-            var message = all_correct ? "<font color=green>Kyselysi toimii oikein</font>" : "<font color=red>Kyselysi toimii väärin</font>";
+            var message = all_correct ? "<font color=green>Your query is correct</font>" : "<font color=red>Your query is incorrect</font>";
             get("message").innerHTML = message;
             if (mooc_status == 1) {
 	            quizzes_send(my_task,get("query").value,all_correct,process_result);
@@ -214,7 +214,7 @@ function process_result() {
 }
 
 function sql_error(error,what) {
-    get("message").innerHTML = "<font color=red>Kyselysi on virheellinen</font>";
+    get("message").innerHTML = "<font color=red>Your query is faulty</font>";
     get("verdict").innerHTML = "<br>"+error;
 }
 
@@ -332,7 +332,7 @@ function process_status(status) {
 
 function end_login(result) {
     if (mooc_status == 2) {
-        alert("Tunnus tai salasana ei ole oikea");
+        alert("Incorrect username or password");
         mooc_status = 0;
     }
     quizzes_status(process_status);
@@ -348,7 +348,7 @@ function create_menu() {
         quizzes_status(process_status);		
 	}
     var html = "";
-    html += "<h2>Tehtävän valinta</h2>";
+    html += "<h2>Choose exercise</h2>";
     html += "<table>";
     var count = 0;
     for (var i = 1; i <= 100; i++) {
@@ -364,18 +364,9 @@ function create_menu() {
     }
     html += "</table>";
     if (mooc_status == 1) {
-        html += "<br>Olet ratkonut "+count+"/100 tehtävää.";
+        html += "<br>You have solved "+count+"/100 exercises.";
     }
-    html += "<h2>Kirjautuminen</h2>";
-    if (mooc_status != 1) {
-        html += "<p>Kirjaudu sisään mooc.fi-tunnuksella:</p>";
-        html += "Tunnus:<br><input onkeyup=\"check_submit(event)\" type=text id=\"username\"><br>";
-        html += "Salasana:<br><input onkeyup=\"check_submit(event)\" type=password id=\"password\"><br>";
-        html += "<br><button onclick=\"start_login()\">Kirjaudu sisään</button>";
-    } else {
-        html += "<p>Olet kirjautunut sisään.</p>";
-        html += "<button onclick=\"mooc_logout(create_menu)\">Kirjaudu ulos</button>";
-    }
+
     get("menu").innerHTML = html;
     quizzes_answer(my_task,show_answer);
     quizzes_model(my_task,show_model);
@@ -394,7 +385,7 @@ function show_model(data) {
         data = data.replace("<","&lt;");
         data = data.replace(">","&gt;");
         my_model = data;
-        get("model").innerHTML = "<br><span style=\"cursor:pointer\" onclick=\"real_model();\"><u>Näytä mallivastaus</u></span>";
+        get("model").innerHTML = "<br><span style=\"cursor:pointer\" onclick=\"real_model();\"><u>Show example answer</u></span>";
     }
 }
 
