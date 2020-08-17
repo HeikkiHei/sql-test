@@ -1,5 +1,5 @@
 TASK
-Hae kaikkien elokuvien nimet käänteisessä aakkosjärjestyksessä.
+Get the names of all the movies in reverse alphabetical order
 
 STRICT
 
@@ -14,8 +14,8 @@ INSERT INTO Movies (name,year) VALUES ('Dumbo',1941);
 INSERT INTO Movies (name,year) VALUES ('Bambi',1942);
 
 RESULT
-Pinocchio
 Snow White
+Pinocchio
 Fantasia
 Dumbo
 Bambi
@@ -27,7 +27,7 @@ INSERT INTO Movies (name,year) VALUES ('Aristocats',1970);
 INSERT INTO Movies (name,year) VALUES ('Black Cauldron',1985);
 
 RESULT
-Cinderella
 Peter Pan
+Cinderella
 Black Cauldron
 Aristocats

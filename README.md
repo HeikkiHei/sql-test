@@ -1,4 +1,4 @@
-# SQL Trainer
+# SQL Exercises
 
 Online SQL learning system used at the Centria University of Applied Sciences.
 

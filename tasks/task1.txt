@@ -1,5 +1,5 @@
 TASK
-Get name of all the movies.
+Get names of all the movies.
 
 TABLES
 CREATE TABLE Movies (id INTEGER PRIMARY KEY, name TEXT, year INTEGER);
