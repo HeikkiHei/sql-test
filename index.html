@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>SQL Trainer</title>
+<title>SQL Exercises</title>
 <style>
 .task_button {width:30px;border-style:solid;border-width:1px;border-color:black;text-align:center;color:black;}
 
@@ -9,7 +9,7 @@ a {text-decoration:none;color:black}
 textarea {font-family:monospace}
 </style>
 <body onhashchange="begin()">
-<h1>SQL Trainer</h1>
+<h1>SQL Exercises</h1>
 <table>
 <tr valign=top><td width=700>
 <div>
@@ -343,7 +343,7 @@ function check_submit(event) {
 }
 
 function create_menu() {
-	if (mooc_status == 1 && status_ready == 0) {
+	if (mooc_status == 0 && status_ready == 0) {
 		status_ready = 1;
         quizzes_status(process_status);		
 	}
