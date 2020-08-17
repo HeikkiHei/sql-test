@@ -2,24 +2,24 @@ TASK
 Hae kaikki eri etunimet.
 
 TABLES
-CREATE TABLE Nimet (id INTEGER PRIMARY KEY, etunimi TEXT, sukunimi TEXT);
+CREATE TABLE Nimet (id INTEGER PRIMARY KEY, etuname TEXT, sukuname TEXT);
 
 TEST
-INSERT INTO Nimet (etunimi,sukunimi) VALUES ('Anna','Korhonen');
-INSERT INTO Nimet (etunimi,sukunimi) VALUES ('Anna','Virtanen');
-INSERT INTO Nimet (etunimi,sukunimi) VALUES ('Pekka','Korhonen');
-INSERT INTO Nimet (etunimi,sukunimi) VALUES ('Pekka','Lahtinen');
-INSERT INTO Nimet (etunimi,sukunimi) VALUES ('Pekka','Virtanen');
+INSERT INTO Nimet (etuname,sukuname) VALUES ('Anna','Korhonen');
+INSERT INTO Nimet (etuname,sukuname) VALUES ('Anna','Virtanen');
+INSERT INTO Nimet (etuname,sukuname) VALUES ('Pekka','Korhonen');
+INSERT INTO Nimet (etuname,sukuname) VALUES ('Pekka','Lahtinen');
+INSERT INTO Nimet (etuname,sukuname) VALUES ('Pekka','Virtanen');
 
 RESULT
 Anna
 Pekka
 
 TEST
-INSERT INTO Nimet (etunimi,sukunimi) VALUES ('Anna','Korhonen');
-INSERT INTO Nimet (etunimi,sukunimi) VALUES ('Pekka','Korhonen');
-INSERT INTO Nimet (etunimi,sukunimi) VALUES ('Uolevi','Korhonen');
-INSERT INTO Nimet (etunimi,sukunimi) VALUES ('Uolevi','Lahtinen');
+INSERT INTO Nimet (etuname,sukuname) VALUES ('Anna','Korhonen');
+INSERT INTO Nimet (etuname,sukuname) VALUES ('Pekka','Korhonen');
+INSERT INTO Nimet (etuname,sukuname) VALUES ('Uolevi','Korhonen');
+INSERT INTO Nimet (etuname,sukuname) VALUES ('Uolevi','Lahtinen');
 
 RESULT
 Anna

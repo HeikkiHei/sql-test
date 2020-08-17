@@ -3,13 +3,13 @@ Ilmoita jokaisesta pelaajasta, montako tulosta hänellä on
 (myös vaikka ei olisi tuloksia).
 
 TABLES
-CREATE TABLE Pelaajat (id INTEGER PRIMARY KEY, nimi TEXT);
+CREATE TABLE Pelaajat (id INTEGER PRIMARY KEY, name TEXT);
 CREATE TABLE Tulokset (id INTEGER PRIMARY KEY, pelaaja_id INTEGER, tulos INTEGER);
 
 TEST
-INSERT INTO Pelaajat (nimi) VALUES ('Uolevi');
-INSERT INTO Pelaajat (nimi) VALUES ('Maija');
-INSERT INTO Pelaajat (nimi) VALUES ('Kaaleppi');
+INSERT INTO Pelaajat (name) VALUES ('Uolevi');
+INSERT INTO Pelaajat (name) VALUES ('Maija');
+INSERT INTO Pelaajat (name) VALUES ('Kaaleppi');
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (1,250);
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (1,300);
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (2,100);
@@ -22,9 +22,9 @@ Maija|3
 Kaaleppi|0
 
 TEST
-INSERT INTO Pelaajat (nimi) VALUES ('Uolevi');
-INSERT INTO Pelaajat (nimi) VALUES ('Maija');
-INSERT INTO Pelaajat (nimi) VALUES ('Kaaleppi');
+INSERT INTO Pelaajat (name) VALUES ('Uolevi');
+INSERT INTO Pelaajat (name) VALUES ('Maija');
+INSERT INTO Pelaajat (name) VALUES ('Kaaleppi');
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (3,100);
 
 RESULT

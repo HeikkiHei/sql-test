@@ -3,7 +3,7 @@ Hae jokaisesta ryhmästä tieto, montako käyttäjää siihen kuuluu.
 
 TABLES
 CREATE TABLE Kayttajat (id INTEGER PRIMARY KEY, tunnus TEXT);
-CREATE TABLE Ryhmat (id INTEGER PRIMARY KEY, nimi TEXT);
+CREATE TABLE Ryhmat (id INTEGER PRIMARY KEY, name TEXT);
 CREATE TABLE Oikeudet (kayttaja_id INTEGER, ryhma_id INTEGER);
 
 TEST
@@ -11,8 +11,8 @@ INSERT INTO Kayttajat(tunnus) VALUES ('uolevi');
 INSERT INTO Kayttajat(tunnus) VALUES ('maija');
 INSERT INTO Kayttajat(tunnus) VALUES ('kaaleppi');
 INSERT INTO Kayttajat(tunnus) VALUES ('liisa');
-INSERT INTO Ryhmat(nimi) VALUES ('puput');
-INSERT INTO Ryhmat(nimi) VALUES ('kilit');
+INSERT INTO Ryhmat(name) VALUES ('puput');
+INSERT INTO Ryhmat(name) VALUES ('kilit');
 INSERT INTO Oikeudet(kayttaja_id, ryhma_id) VALUES (1,1);
 INSERT INTO Oikeudet(kayttaja_id, ryhma_id) VALUES (2,1);
 INSERT INTO Oikeudet(kayttaja_id, ryhma_id) VALUES (3,1);
@@ -27,7 +27,7 @@ INSERT INTO Kayttajat(tunnus) VALUES ('uolevi');
 INSERT INTO Kayttajat(tunnus) VALUES ('maija');
 INSERT INTO Kayttajat(tunnus) VALUES ('kaaleppi');
 INSERT INTO Kayttajat(tunnus) VALUES ('liisa');
-INSERT INTO Ryhmat(nimi) VALUES ('puput');
+INSERT INTO Ryhmat(name) VALUES ('puput');
 
 RESULT
 puput|0
@@ -37,9 +37,9 @@ INSERT INTO Kayttajat(tunnus) VALUES ('uolevi');
 INSERT INTO Kayttajat(tunnus) VALUES ('maija');
 INSERT INTO Kayttajat(tunnus) VALUES ('kaaleppi');
 INSERT INTO Kayttajat(tunnus) VALUES ('liisa');
-INSERT INTO Ryhmat(nimi) VALUES ('puput');
-INSERT INTO Ryhmat(nimi) VALUES ('kilit');
-INSERT INTO Ryhmat(nimi) VALUES ('perhoset');
+INSERT INTO Ryhmat(name) VALUES ('puput');
+INSERT INTO Ryhmat(name) VALUES ('kilit');
+INSERT INTO Ryhmat(name) VALUES ('perhoset');
 INSERT INTO Oikeudet(kayttaja_id,ryhma_id) VALUES (1,1);
 INSERT INTO Oikeudet(kayttaja_id,ryhma_id) VALUES (1,2);
 INSERT INTO Oikeudet(kayttaja_id,ryhma_id) VALUES (1,3);

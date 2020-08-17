@@ -6,39 +6,39 @@ toissijaisesti aakkosjärjestyksessä.
 STRICT
 
 TABLES
-CREATE TABLE Elokuvat (id INTEGER PRIMARY KEY, nimi TEXT, vuosi INTEGER);
+CREATE TABLE Movies (id INTEGER PRIMARY KEY, name TEXT, year INTEGER);
 
 TEST
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Lumikki',1937);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Fantasia',1940);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Pinocchio',1940);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Dumbo',1941);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Bambi',1942);
+INSERT INTO Movies (name,year) VALUES ('Snow White',1937);
+INSERT INTO Movies (name,year) VALUES ('Fantasia',1940);
+INSERT INTO Movies (name,year) VALUES ('Pinocchio',1940);
+INSERT INTO Movies (name,year) VALUES ('Dumbo',1941);
+INSERT INTO Movies (name,year) VALUES ('Bambi',1942);
 
 RESULT
 Bambi|1942
 Dumbo|1941
 Fantasia|1940
 Pinocchio|1940
-Lumikki|1937
+Snow White|1937
 
 TEST
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Tuhkimo',1950);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Peter Pan',1953);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Aristokatit',1970);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Hiidenpata',1985);
+INSERT INTO Movies (name,year) VALUES ('Tuhkimo',1950);
+INSERT INTO Movies (name,year) VALUES ('Peter Pan',1953);
+INSERT INTO Movies (name,year) VALUES ('Aristocats',1970);
+INSERT INTO Movies (name,year) VALUES ('Black Cauldron',1985);
 
 RESULT
-Hiidenpata|1985
-Aristokatit|1970
+Black Cauldron|1985
+Aristocats|1970
 Peter Pan|1953
 Tuhkimo|1950
 
 TEST
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('A',2000);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('B',2000);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('D',2001);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('C',2001);
+INSERT INTO Movies (name,year) VALUES ('A',2000);
+INSERT INTO Movies (name,year) VALUES ('B',2000);
+INSERT INTO Movies (name,year) VALUES ('D',2001);
+INSERT INTO Movies (name,year) VALUES ('C',2001);
 
 RESULT
 C|2001

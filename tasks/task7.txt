@@ -2,25 +2,25 @@ TASK
 Hae kaikkien elokuvien nimet, joita ei ole julkaistu vuonna 1940.
 
 TABLES
-CREATE TABLE Elokuvat (id INTEGER PRIMARY KEY, nimi TEXT, vuosi INTEGER);
+CREATE TABLE Movies (id INTEGER PRIMARY KEY, name TEXT, year INTEGER);
 
 TEST
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Lumikki',1937);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Fantasia',1940);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Pinocchio',1940);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Dumbo',1941);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Bambi',1942);
+INSERT INTO Movies (name,year) VALUES ('Snow White',1937);
+INSERT INTO Movies (name,year) VALUES ('Fantasia',1940);
+INSERT INTO Movies (name,year) VALUES ('Pinocchio',1940);
+INSERT INTO Movies (name,year) VALUES ('Dumbo',1941);
+INSERT INTO Movies (name,year) VALUES ('Bambi',1942);
 
 RESULT
-Lumikki
+Snow White
 Dumbo
 Bambi
 
 TEST
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Fantasia',1940);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Aristokatit',1970);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Hiidenpata',1985);
+INSERT INTO Movies (name,year) VALUES ('Fantasia',1940);
+INSERT INTO Movies (name,year) VALUES ('Aristocats',1970);
+INSERT INTO Movies (name,year) VALUES ('Black Cauldron',1985);
 
 RESULT
-Aristokatit
-Hiidenpata
+Aristocats
+Black Cauldron

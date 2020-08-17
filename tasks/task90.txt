@@ -1,21 +1,21 @@
 TASK
 Muodosta tuloslista, jossa on sijaluku,
-pelaajan nimi ja paras tulos.
+pelaajan name ja paras tulos.
 Jos kahdella pelaajalla on sama tulos,
 nimet järjestetään aakkosjärjestykseen.
-Jokaisella pelaajalla on eri nimi
+Jokaisella pelaajalla on eri name
 ja ainakin yksi tulos.
 
 STRICT
 
 TABLES
-CREATE TABLE Pelaajat (id INTEGER PRIMARY KEY, nimi TEXT);
+CREATE TABLE Pelaajat (id INTEGER PRIMARY KEY, name TEXT);
 CREATE TABLE Tulokset (id INTEGER PRIMARY KEY, pelaaja_id INTEGER, tulos INTEGER);
 
 TEST
-INSERT INTO Pelaajat (nimi) VALUES ('Uolevi');
-INSERT INTO Pelaajat (nimi) VALUES ('Maija');
-INSERT INTO Pelaajat (nimi) VALUES ('Kaaleppi');
+INSERT INTO Pelaajat (name) VALUES ('Uolevi');
+INSERT INTO Pelaajat (name) VALUES ('Maija');
+INSERT INTO Pelaajat (name) VALUES ('Kaaleppi');
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (1,100);
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (1,350);
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (2,300);
@@ -28,7 +28,7 @@ RESULT
 3|Uolevi|350
 
 TEST
-INSERT INTO Pelaajat (nimi) VALUES ('Uolevi');
+INSERT INTO Pelaajat (name) VALUES ('Uolevi');
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (1,100);
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (1,200);
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (1,300);
@@ -39,9 +39,9 @@ RESULT
 1|Uolevi|500
 
 TEST
-INSERT INTO Pelaajat (nimi) VALUES ('Uolevi');
-INSERT INTO Pelaajat (nimi) VALUES ('Maija');
-INSERT INTO Pelaajat (nimi) VALUES ('Liisa');
+INSERT INTO Pelaajat (name) VALUES ('Uolevi');
+INSERT INTO Pelaajat (name) VALUES ('Maija');
+INSERT INTO Pelaajat (name) VALUES ('Liisa');
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (1,100);
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (2,200);
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (3,200);
@@ -52,12 +52,12 @@ RESULT
 3|Uolevi|100
 
 TEST
-INSERT INTO Pelaajat (nimi) VALUES ('Uolevi');
-INSERT INTO Pelaajat (nimi) VALUES ('Maija');
-INSERT INTO Pelaajat (nimi) VALUES ('Liisa');
-INSERT INTO Pelaajat (nimi) VALUES ('Kotivalo');
-INSERT INTO Pelaajat (nimi) VALUES ('Justiina');
-INSERT INTO Pelaajat (nimi) VALUES ('Kaaleppi');
+INSERT INTO Pelaajat (name) VALUES ('Uolevi');
+INSERT INTO Pelaajat (name) VALUES ('Maija');
+INSERT INTO Pelaajat (name) VALUES ('Liisa');
+INSERT INTO Pelaajat (name) VALUES ('Kotivalo');
+INSERT INTO Pelaajat (name) VALUES ('Justiina');
+INSERT INTO Pelaajat (name) VALUES ('Kaaleppi');
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (1,100);
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (2,100);
 INSERT INTO Tulokset (pelaaja_id,tulos) VALUES (3,100);

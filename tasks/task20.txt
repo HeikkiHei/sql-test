@@ -2,35 +2,35 @@ TASK
 Näytä suurin työntekijän palkka yrityksistä, joissa se on ainakin 5000.
 
 TABLES
-CREATE TABLE Tyontekijat (id INTEGER PRIMARY KEY, nimi TEXT, palkka INTEGER, yritys TEXT);
+CREATE TABLE Tyontekijat (id INTEGER PRIMARY KEY, name TEXT, palkka INTEGER, yritys TEXT);
 
 TEST
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Uolevi',5000,'Google');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Maija',6000,'Google');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Liisa',2000,'Amazon');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Kaaleppi',7500,'Microsoft');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Uolevi',5000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Maija',6000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Liisa',2000,'Amazon');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Kaaleppi',7500,'Microsoft');
 
 RESULT
 Google|6000
 Microsoft|7500
 
 TEST
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Uolevi',2000,'Google');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Maija',3000,'Google');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Liisa',4000,'Google');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Kaaleppi',5000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Uolevi',2000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Maija',3000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Liisa',4000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Kaaleppi',5000,'Google');
 
 RESULT
 Google|5000
 
 TEST
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Uolevi',2000,'Google');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Maija',6000,'Amazon');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Liisa',2000,'Amazon');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Kaaleppi',7500,'Microsoft');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Vihtori',7500,'Microsoft');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Justiina',8000,'Amazon');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Kotivalo',7500,'Microsoft');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Uolevi',2000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Maija',6000,'Amazon');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Liisa',2000,'Amazon');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Kaaleppi',7500,'Microsoft');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Vihtori',7500,'Microsoft');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Justiina',8000,'Amazon');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Kotivalo',7500,'Microsoft');
 
 RESULT
 Amazon|8000

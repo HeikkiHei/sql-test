@@ -5,13 +5,13 @@ joukkueeseen "Puput" ja "Kilit". Ilmoita joukkuejako
 annetuille pelaajille.
 
 TABLES
-CREATE TABLE Pelaajat (id INTEGER PRIMARY KEY, nimi TEXT);
+CREATE TABLE Pelaajat (id INTEGER PRIMARY KEY, name TEXT);
 
 TEST
-INSERT INTO Pelaajat(nimi) VALUES ('Uolevi');
-INSERT INTO Pelaajat(nimi) VALUES ('Maija');
-INSERT INTO Pelaajat(nimi) VALUES ('Liisa');
-INSERT INTO Pelaajat(nimi) VALUES ('Kaaleppi');
+INSERT INTO Pelaajat(name) VALUES ('Uolevi');
+INSERT INTO Pelaajat(name) VALUES ('Maija');
+INSERT INTO Pelaajat(name) VALUES ('Liisa');
+INSERT INTO Pelaajat(name) VALUES ('Kaaleppi');
 
 RESULT
 Kaaleppi|Puput
@@ -20,13 +20,13 @@ Maija|Puput
 Uolevi|Kilit
 
 TEST
-INSERT INTO Pelaajat(nimi) VALUES ('Uolevi');
-INSERT INTO Pelaajat(nimi) VALUES ('Maija');
-INSERT INTO Pelaajat(nimi) VALUES ('Liisa');
-INSERT INTO Pelaajat(nimi) VALUES ('Kaaleppi');
-INSERT INTO Pelaajat(nimi) VALUES ('Vihtori');
-INSERT INTO Pelaajat(nimi) VALUES ('Justiina');
-INSERT INTO Pelaajat(nimi) VALUES ('Kotivalo');
+INSERT INTO Pelaajat(name) VALUES ('Uolevi');
+INSERT INTO Pelaajat(name) VALUES ('Maija');
+INSERT INTO Pelaajat(name) VALUES ('Liisa');
+INSERT INTO Pelaajat(name) VALUES ('Kaaleppi');
+INSERT INTO Pelaajat(name) VALUES ('Vihtori');
+INSERT INTO Pelaajat(name) VALUES ('Justiina');
+INSERT INTO Pelaajat(name) VALUES ('Kotivalo');
 
 RESULT
 Justiina|Puput

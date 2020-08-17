@@ -2,12 +2,12 @@ TASK
 Hae käyttäjien koko nimet yhtenä sarakkeena.
 
 TABLES
-CREATE TABLE Kayttajat (id INTEGER PRIMARY KEY, etunimi TEXT, sukunimi TEXT);
+CREATE TABLE Kayttajat (id INTEGER PRIMARY KEY, etuname TEXT, sukuname TEXT);
 
 TEST
-INSERT INTO Kayttajat (etunimi,sukunimi) VALUES ('Liisa','Virtanen');
-INSERT INTO Kayttajat (etunimi,sukunimi) VALUES ('Anna','Korhonen');
-INSERT INTO Kayttajat (etunimi,sukunimi) VALUES ('Kalle','Ojala');
+INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Liisa','Virtanen');
+INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Anna','Korhonen');
+INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Kalle','Ojala');
 
 RESULT
 Liisa Virtanen
@@ -15,9 +15,9 @@ Anna Korhonen
 Kalle Ojala
 
 TEST
-INSERT INTO Kayttajat (etunimi,sukunimi) VALUES ('Liisa','Korhonen');
-INSERT INTO Kayttajat (etunimi,sukunimi) VALUES ('Anna','Ojala');
-INSERT INTO Kayttajat (etunimi,sukunimi) VALUES ('Kalle','Virtanen');
+INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Liisa','Korhonen');
+INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Anna','Ojala');
+INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Kalle','Virtanen');
 
 RESULT
 Liisa Korhonen

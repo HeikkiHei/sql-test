@@ -2,13 +2,13 @@ TASK
 Hae jokaisen tuotteen hinta kaksinkertaisena.
 
 TABLES
-CREATE TABLE Tuotteet (id INTEGER PRIMARY KEY, nimi TEXT, hinta INTEGER);
+CREATE TABLE Tuotteet (id INTEGER PRIMARY KEY, name TEXT, hinta INTEGER);
 
 TEST
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('selleri',5);
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('lanttu',8);
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('nauris',6);
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('porkkana',2);
+INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',5);
+INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',8);
+INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',6);
+INSERT INTO Tuotteet (name,hinta) VALUES ('porkkana',2);
 
 RESULT
 selleri|10
@@ -17,9 +17,9 @@ nauris|12
 porkkana|4
 
 TEST
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('ananas',4);
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('banaani',8);
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('peruna',5);
+INSERT INTO Tuotteet (name,hinta) VALUES ('ananas',4);
+INSERT INTO Tuotteet (name,hinta) VALUES ('banaani',8);
+INSERT INTO Tuotteet (name,hinta) VALUES ('peruna',5);
 
 RESULT
 ananas|8

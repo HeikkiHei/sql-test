@@ -4,13 +4,13 @@ monenko tuotteen hinta eroaa enintään yhdellä
 (tässä lasketaan mukaan myös tuote itse).
 
 TABLES
-CREATE TABLE Tuotteet (id INTEGER PRIMARY KEY, nimi TEXT, hinta INTEGER);
+CREATE TABLE Tuotteet (id INTEGER PRIMARY KEY, name TEXT, hinta INTEGER);
 
 TEST
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('selleri',7);
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('lanttu',4);
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('retiisi',8);
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('nauris',6);
+INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',7);
+INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',4);
+INSERT INTO Tuotteet (name,hinta) VALUES ('retiisi',8);
+INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',6);
 
 RESULT
 selleri|3
@@ -19,10 +19,10 @@ retiisi|2
 nauris|2
 
 TEST
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('selleri',7);
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('lanttu',5);
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('retiisi',8);
-INSERT INTO Tuotteet (nimi,hinta) VALUES ('nauris',3);
+INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',7);
+INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',5);
+INSERT INTO Tuotteet (name,hinta) VALUES ('retiisi',8);
+INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',3);
 
 RESULT
 selleri|2

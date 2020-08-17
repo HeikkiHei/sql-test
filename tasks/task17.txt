@@ -2,22 +2,22 @@ TASK
 Hae eri yritysten määrä.
 
 TABLES
-CREATE TABLE Tyontekijat (id INTEGER PRIMARY KEY, nimi TEXT, palkka INTEGER, yritys TEXT);
+CREATE TABLE Tyontekijat (id INTEGER PRIMARY KEY, name TEXT, palkka INTEGER, yritys TEXT);
 
 TEST
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Uolevi',5000,'Google');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Maija',6000,'Google');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Liisa',2000,'Amazon');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Kaaleppi',7500,'Microsoft');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Uolevi',5000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Maija',6000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Liisa',2000,'Amazon');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Kaaleppi',7500,'Microsoft');
 
 RESULT
 3
 
 TEST
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Uolevi',1000,'Google');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Maija',2000,'Google');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Liisa',3000,'Google');
-INSERT INTO Tyontekijat (nimi,palkka,yritys) VALUES ('Kaaleppi',4000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Uolevi',1000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Maija',2000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Liisa',3000,'Google');
+INSERT INTO Tyontekijat (name,palkka,yritys) VALUES ('Kaaleppi',4000,'Google');
 
 RESULT
 1

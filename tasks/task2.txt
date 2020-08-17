@@ -2,30 +2,30 @@ TASK
 Hae kaikkien elokuvien nimet ja julkaisuvuodet.
 
 TABLES
-CREATE TABLE Elokuvat (id INTEGER PRIMARY KEY, nimi TEXT, vuosi INTEGER);
+CREATE TABLE Movies (id INTEGER PRIMARY KEY, name TEXT, year INTEGER);
 
 TEST
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Lumikki',1937);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Fantasia',1940);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Pinocchio',1940);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Dumbo',1941);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Bambi',1942);
+INSERT INTO Movies (name,year) VALUES ('Snow White',1937);
+INSERT INTO Movies (name,year) VALUES ('Fantasia',1940);
+INSERT INTO Movies (name,year) VALUES ('Pinocchio',1940);
+INSERT INTO Movies (name,year) VALUES ('Dumbo',1941);
+INSERT INTO Movies (name,year) VALUES ('Bambi',1942);
 
 RESULT
-Lumikki|1937
+Snow White|1937
 Fantasia|1940
 Pinocchio|1940
 Dumbo|1941
 Bambi|1942
 
 TEST
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Tuhkimo',1950);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Peter Pan',1953);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Aristokatit',1970);
-INSERT INTO Elokuvat (nimi,vuosi) VALUES ('Hiidenpata',1985);
+INSERT INTO Movies (name,year) VALUES ('Tuhkimo',1950);
+INSERT INTO Movies (name,year) VALUES ('Peter Pan',1953);
+INSERT INTO Movies (name,year) VALUES ('Aristocats',1970);
+INSERT INTO Movies (name,year) VALUES ('Black Cauldron',1985);
 
 RESULT
 Tuhkimo|1950
 Peter Pan|1953
-Aristokatit|1970
-Hiidenpata|1985
+Aristocats|1970
+Black Cauldron|1985
