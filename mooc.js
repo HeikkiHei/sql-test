@@ -75,12 +75,12 @@ function quizzes_answer(task,callback) {
             callback(this.responseText);
         }
     }
-    
+/*    
     xhttp.open("GET","https://ahslaaks.users.cs.helsinki.fi/mooc/sql_answer.php?token="+mooc_token+"&task="+task,true);
     xhttp.send();
-    
+  */  
 }
-/*
+
 function quizzes_model(task,callback) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -88,10 +88,11 @@ function quizzes_model(task,callback) {
             callback(this.responseText);
         }
     }
+    /*
     xhttp.open("GET","https://ahslaaks.users.cs.helsinki.fi/mooc/sql_model.php?token="+mooc_token+"&task="+task,true);
     xhttp.send();
+    */
 }
-*/
 if (sessionStorage.getItem("mooc_token")) {
     mooc_status = 1;
     mooc_token = sessionStorage.getItem("mooc_token");
