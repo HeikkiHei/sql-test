@@ -1,22 +1,22 @@
 TASK
-Hae kaikki sanat, jotka alkavat a-kirjaimella.
+Get all the words beginning with the letter 'a'.
 
 TABLES
-CREATE TABLE Sanat (id INTEGER PRIMARY KEY, sana TEXT);
+CREATE TABLE Words (id INTEGER PRIMARY KEY, word TEXT);
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('apina');
-INSERT INTO Sanat (sana) VALUES ('banaani');
-INSERT INTO Sanat (sana) VALUES ('cembalo');
+INSERT INTO Words (word) VALUES ('apina');
+INSERT INTO Words (word) VALUES ('banana');
+INSERT INTO Words (word) VALUES ('cembalo');
 
 RESULT
 apina
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('apina');
-INSERT INTO Sanat (sana) VALUES ('apila');
-INSERT INTO Sanat (sana) VALUES ('koivu');
-INSERT INTO Sanat (sana) VALUES ('kuusi');
+INSERT INTO Words (word) VALUES ('apina');
+INSERT INTO Words (word) VALUES ('apila');
+INSERT INTO Words (word) VALUES ('koivu');
+INSERT INTO Words (word) VALUES ('kuusi');
 
 RESULT
 apina

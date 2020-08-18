@@ -1,36 +1,36 @@
 TASK
-Hae kaikki matkustajat, jotka ovat yksin vaunussaan.
+Get all the passengers who are alone in their cart.
 
 TABLES
-CREATE TABLE Vaunut (id INTEGER PRIMARY KEY, name TEXT, paikat INTEGER);
-CREATE TABLE Matkustajat (id INTEGER PRIMARY KEY, name TEXT, vaunu_id INTEGER);
+CREATE TABLE Carts (id INTEGER PRIMARY KEY, name TEXT, seats INTEGER);
+CREATE TABLE Passengers (id INTEGER PRIMARY KEY, name TEXT, cart_id INTEGER);
 
 TEST
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu1",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu2",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu3",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu4",10);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Uolevi",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Maija",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Kaaleppi",2);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Kotivalo",4);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Justiina",4);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Vihtori",4);
+INSERT INTO Carts (name,seats) VALUES ("cart1",10);
+INSERT INTO Carts (name,seats) VALUES ("cart2",10);
+INSERT INTO Carts (name,seats) VALUES ("cart3",10);
+INSERT INTO Carts (name,seats) VALUES ("cart4",10);
+INSERT INTO Passengers (name,cart_id) VALUES ("Uolevi",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Maija",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Kaaleppi",2);
+INSERT INTO Passengers (name,cart_id) VALUES ("Kotivalo",4);
+INSERT INTO Passengers (name,cart_id) VALUES ("Justiina",4);
+INSERT INTO Passengers (name,cart_id) VALUES ("Vihtori",4);
 
 RESULT
 Kaaleppi
 
 TEST
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu1",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu2",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu3",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu4",10);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Uolevi",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Maija",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Kaaleppi",2);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Kotivalo",3);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Justiina",3);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Vihtori",4);
+INSERT INTO Carts (name,seats) VALUES ("cart1",10);
+INSERT INTO Carts (name,seats) VALUES ("cart2",10);
+INSERT INTO Carts (name,seats) VALUES ("cart3",10);
+INSERT INTO Carts (name,seats) VALUES ("cart4",10);
+INSERT INTO Passengers (name,cart_id) VALUES ("Uolevi",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Maija",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Kaaleppi",2);
+INSERT INTO Passengers (name,cart_id) VALUES ("Kotivalo",3);
+INSERT INTO Passengers (name,cart_id) VALUES ("Justiina",3);
+INSERT INTO Passengers (name,cart_id) VALUES ("Vihtori",4);
 
 RESULT
 Kaaleppi

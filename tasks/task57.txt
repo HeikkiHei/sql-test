@@ -1,23 +1,22 @@
 TASK
-Hae kaikki sanat, joissa esiintyy i-kirjain.
+Get all the words that contain the letter 'i'.
 
 TABLES
-CREATE TABLE Sanat (id INTEGER PRIMARY KEY, sana TEXT);
+CREATE TABLE Words (id INTEGER PRIMARY KEY, word TEXT);
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('apina');
-INSERT INTO Sanat (sana) VALUES ('banaani');
-INSERT INTO Sanat (sana) VALUES ('cembalo');
+INSERT INTO Words (word) VALUES ('apina');
+INSERT INTO Words (word) VALUES ('banana');
+INSERT INTO Words (word) VALUES ('cembalo');
 
 RESULT
 apina
-banaani
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('apina');
-INSERT INTO Sanat (sana) VALUES ('apila');
-INSERT INTO Sanat (sana) VALUES ('koivu');
-INSERT INTO Sanat (sana) VALUES ('kuusi');
+INSERT INTO Words (word) VALUES ('apina');
+INSERT INTO Words (word) VALUES ('apila');
+INSERT INTO Words (word) VALUES ('koivu');
+INSERT INTO Words (word) VALUES ('kuusi');
 
 RESULT
 apina
@@ -26,10 +25,10 @@ koivu
 kuusi
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('puku');
-INSERT INTO Sanat (sana) VALUES ('kivi');
-INSERT INTO Sanat (sana) VALUES ('auto');
-INSERT INTO Sanat (sana) VALUES ('haku');
+INSERT INTO Words (word) VALUES ('puku');
+INSERT INTO Words (word) VALUES ('kivi');
+INSERT INTO Words (word) VALUES ('auto');
+INSERT INTO Words (word) VALUES ('haku');
 
 RESULT
 kivi

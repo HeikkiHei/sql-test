@@ -1,61 +1,60 @@
 TASK
-Ilmoita jokaisesta junan vaunusta,
-montako tyhjää paikkaa siellä on.
+For each cart, get the amount of empty seats.
 
 TABLES
-CREATE TABLE Vaunut (id INTEGER PRIMARY KEY, name TEXT, paikat INTEGER);
-CREATE TABLE Matkustajat (id INTEGER PRIMARY KEY, name TEXT, vaunu_id INTEGER);
+CREATE TABLE Carts (id INTEGER PRIMARY KEY, name TEXT, seats INTEGER);
+CREATE TABLE Passengers (id INTEGER PRIMARY KEY, name TEXT, cart_id INTEGER);
 
 TEST
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu1",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu2",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu3",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu4",10);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Uolevi",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Maija",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Kaaleppi",2);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Kotivalo",4);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Justiina",4);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Vihtori",4);
+INSERT INTO Carts (name,seats) VALUES ("cart1",10);
+INSERT INTO Carts (name,seats) VALUES ("cart2",10);
+INSERT INTO Carts (name,seats) VALUES ("cart3",10);
+INSERT INTO Carts (name,seats) VALUES ("cart4",10);
+INSERT INTO Passengers (name,cart_id) VALUES ("Uolevi",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Maija",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Kaaleppi",2);
+INSERT INTO Passengers (name,cart_id) VALUES ("Kotivalo",4);
+INSERT INTO Passengers (name,cart_id) VALUES ("Justiina",4);
+INSERT INTO Passengers (name,cart_id) VALUES ("Vihtori",4);
 
 RESULT
-vaunu1|8
-vaunu2|9
-vaunu3|10
-vaunu4|7
+cart1|8
+cart2|9
+cart3|10
+cart4|7
 
 TEST
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu1",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu2",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu3",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu4",10);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Uolevi",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Maija",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Kaaleppi",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Kotivalo",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Justiina",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Vihtori",4);
+INSERT INTO Carts (name,seats) VALUES ("cart1",10);
+INSERT INTO Carts (name,seats) VALUES ("cart2",10);
+INSERT INTO Carts (name,seats) VALUES ("cart3",10);
+INSERT INTO Carts (name,seats) VALUES ("cart4",10);
+INSERT INTO Passengers (name,cart_id) VALUES ("Uolevi",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Maija",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Kaaleppi",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Kotivalo",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Justiina",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Vihtori",4);
 
 RESULT
-vaunu1|5
-vaunu2|10
-vaunu3|10
-vaunu4|9
+cart1|5
+cart2|10
+cart3|10
+cart4|9
 
 TEST
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu1",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu2",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu3",10);
-INSERT INTO Vaunut (name,paikat) VALUES ("vaunu4",100);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Uolevi",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Maija",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Kaaleppi",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Kotivalo",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Justiina",1);
-INSERT INTO Matkustajat (name,vaunu_id) VALUES ("Vihtori",4);
+INSERT INTO Carts (name,seats) VALUES ("cart1",10);
+INSERT INTO Carts (name,seats) VALUES ("cart2",10);
+INSERT INTO Carts (name,seats) VALUES ("cart3",10);
+INSERT INTO Carts (name,seats) VALUES ("cart4",100);
+INSERT INTO Passengers (name,cart_id) VALUES ("Uolevi",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Maija",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Kaaleppi",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Kotivalo",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Justiina",1);
+INSERT INTO Passengers (name,cart_id) VALUES ("Vihtori",4);
 
 RESULT
-vaunu1|5
-vaunu2|10
-vaunu3|10
-vaunu4|99
+cart1|5
+cart2|10
+cart3|10
+cart4|99

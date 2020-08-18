@@ -1,24 +1,24 @@
 TASK
-Hae kaikki tuotteet, joiden hinta on parillinen.
+Get all the products where the price is even.
 
 TABLES
-CREATE TABLE Tuotteet (id INTEGER PRIMARY KEY, name TEXT, hinta INTEGER);
+CREATE TABLE Products (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',8);
-INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',7);
-INSERT INTO Tuotteet (name,hinta) VALUES ('porkkana',2);
+INSERT INTO Products (name,price) VALUES ('celery',5);
+INSERT INTO Products (name,price) VALUES ('turnip',8);
+INSERT INTO Products (name,price) VALUES ('cucumber',7);
+INSERT INTO Products (name,price) VALUES ('carrot',2);
 
 RESULT
-lanttu|8
-porkkana|2
+turnip|8
+carrot|2
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('ananas',4);
-INSERT INTO Tuotteet (name,hinta) VALUES ('banaani',8);
-INSERT INTO Tuotteet (name,hinta) VALUES ('peruna',5);
+INSERT INTO Products (name,price) VALUES ('pineapple',4);
+INSERT INTO Products (name,price) VALUES ('banana',8);
+INSERT INTO Products (name,price) VALUES ('potato',5);
 
 RESULT
-ananas|4
-banaani|8
+pineapple|4
+banana|8

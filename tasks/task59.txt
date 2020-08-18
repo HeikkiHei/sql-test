@@ -1,24 +1,24 @@
 TASK
-Hae kaikki sanat, joissa on tasan viisi kirjainta
-ja toinen kirjain on p.
+Get all the words with exactly 5 letters,
+and their second letter is 'p'.
 
 TABLES
-CREATE TABLE Sanat (id INTEGER PRIMARY KEY, sana TEXT);
+CREATE TABLE Words (id INTEGER PRIMARY KEY, word TEXT);
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('apina');
-INSERT INTO Sanat (sana) VALUES ('banaani');
-INSERT INTO Sanat (sana) VALUES ('cembalo');
+INSERT INTO Words (word) VALUES ('apina');
+INSERT INTO Words (word) VALUES ('banana');
+INSERT INTO Words (word) VALUES ('cembalo');
 
 RESULT
 apina
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('apina');
-INSERT INTO Sanat (sana) VALUES ('koivu');
-INSERT INTO Sanat (sana) VALUES ('kuusi');
-INSERT INTO Sanat (sana) VALUES ('oppia');
-INSERT INTO Sanat (sana) VALUES ('oppilas');
+INSERT INTO Words (word) VALUES ('apina');
+INSERT INTO Words (word) VALUES ('koivu');
+INSERT INTO Words (word) VALUES ('kuusi');
+INSERT INTO Words (word) VALUES ('oppia');
+INSERT INTO Words (word) VALUES ('oppilas');
 
 RESULT
 apina

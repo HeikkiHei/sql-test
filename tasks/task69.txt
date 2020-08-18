@@ -1,65 +1,65 @@
 TASK
-Laske, monellako tavalla voit valita kaksi tuotetta niin,
-että yhteishinta on tasan 10.
+Count, in how many ways can you choose 2 products,
+so the combined price is exactly 10.
 <br><br>
-Huom! Yhdistelmässä voi olla kaksi samaa tuotetta ja
-halutaan laskea erilaiset yhdistelmät.
-Esimerkissä yhdistelmät ovat selleri+selleri ja lanttu+nauris
-(eli nauris+lanttu ei ole mukana).
+NOTICE! You can repeat a product in a combination,
+and we want to calculate different combinations.
+In the example, combinations celery+celery and turnip+cucumber.
+(so cucumber+turnip is not included).
 
 TABLES
-CREATE TABLE Tuotteet (id INTEGER PRIMARY KEY, name TEXT, hinta INTEGER);
+CREATE TABLE Products (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',3);
-INSERT INTO Tuotteet (name,hinta) VALUES ('retiisi',8);
-INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',7);
+INSERT INTO Products (name,price) VALUES ('celery',5);
+INSERT INTO Products (name,price) VALUES ('turnip',3);
+INSERT INTO Products (name,price) VALUES ('radish',8);
+INSERT INTO Products (name,price) VALUES ('cucumber',7);
 
 RESULT
 2
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('a',1);
-INSERT INTO Tuotteet (name,hinta) VALUES ('b',2);
-INSERT INTO Tuotteet (name,hinta) VALUES ('c',3);
-INSERT INTO Tuotteet (name,hinta) VALUES ('d',4);
-INSERT INTO Tuotteet (name,hinta) VALUES ('e',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('f',6);
-INSERT INTO Tuotteet (name,hinta) VALUES ('g',7);
-INSERT INTO Tuotteet (name,hinta) VALUES ('h',8);
-INSERT INTO Tuotteet (name,hinta) VALUES ('i',9);
-INSERT INTO Tuotteet (name,hinta) VALUES ('j',10);
+INSERT INTO Products (name,price) VALUES ('a',1);
+INSERT INTO Products (name,price) VALUES ('b',2);
+INSERT INTO Products (name,price) VALUES ('c',3);
+INSERT INTO Products (name,price) VALUES ('d',4);
+INSERT INTO Products (name,price) VALUES ('e',5);
+INSERT INTO Products (name,price) VALUES ('f',6);
+INSERT INTO Products (name,price) VALUES ('g',7);
+INSERT INTO Products (name,price) VALUES ('h',8);
+INSERT INTO Products (name,price) VALUES ('i',9);
+INSERT INTO Products (name,price) VALUES ('j',10);
 
 RESULT
 5
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('a',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('b',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('c',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('d',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('e',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('f',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('g',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('h',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('i',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('j',5);
+INSERT INTO Products (name,price) VALUES ('a',5);
+INSERT INTO Products (name,price) VALUES ('b',5);
+INSERT INTO Products (name,price) VALUES ('c',5);
+INSERT INTO Products (name,price) VALUES ('d',5);
+INSERT INTO Products (name,price) VALUES ('e',5);
+INSERT INTO Products (name,price) VALUES ('f',5);
+INSERT INTO Products (name,price) VALUES ('g',5);
+INSERT INTO Products (name,price) VALUES ('h',5);
+INSERT INTO Products (name,price) VALUES ('i',5);
+INSERT INTO Products (name,price) VALUES ('j',5);
 
 RESULT
 55
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('a',4);
-INSERT INTO Tuotteet (name,hinta) VALUES ('b',4);
-INSERT INTO Tuotteet (name,hinta) VALUES ('c',4);
-INSERT INTO Tuotteet (name,hinta) VALUES ('d',4);
-INSERT INTO Tuotteet (name,hinta) VALUES ('e',4);
-INSERT INTO Tuotteet (name,hinta) VALUES ('f',6);
-INSERT INTO Tuotteet (name,hinta) VALUES ('g',6);
-INSERT INTO Tuotteet (name,hinta) VALUES ('h',6);
-INSERT INTO Tuotteet (name,hinta) VALUES ('i',6);
-INSERT INTO Tuotteet (name,hinta) VALUES ('j',6);
+INSERT INTO Products (name,price) VALUES ('a',4);
+INSERT INTO Products (name,price) VALUES ('b',4);
+INSERT INTO Products (name,price) VALUES ('c',4);
+INSERT INTO Products (name,price) VALUES ('d',4);
+INSERT INTO Products (name,price) VALUES ('e',4);
+INSERT INTO Products (name,price) VALUES ('f',6);
+INSERT INTO Products (name,price) VALUES ('g',6);
+INSERT INTO Products (name,price) VALUES ('h',6);
+INSERT INTO Products (name,price) VALUES ('i',6);
+INSERT INTO Products (name,price) VALUES ('j',6);
 
 RESULT
 25

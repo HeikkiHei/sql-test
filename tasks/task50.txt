@@ -1,9 +1,9 @@
 TASK
-Hae kaikkien elokuvien nimet,
-jotka on julkaistu karkausvuonna.
-(year on karkausyear, jos se on jaollinen 4:llä.
-Jos year on jaollinen 100:lla,
-se on karkausyear vain, jos se on myös jaollinen 400:lla.)
+Get all the names of the movies,
+which were published on a leap year.
+(A year is a leap year, if it is divisible by 4.
+If the year is divisible by 100, it is a leap year
+only if it is also divisible by 400.)
 
 TABLES
 CREATE TABLE Movies (id INTEGER PRIMARY KEY, name TEXT, year INTEGER);

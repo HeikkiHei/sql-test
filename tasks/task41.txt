@@ -1,27 +1,27 @@
 TASK
-Hae jokaisen tuotteen hinta kaksinkertaisena.
+For each product, get the price doubled.
 
 TABLES
-CREATE TABLE Tuotteet (id INTEGER PRIMARY KEY, name TEXT, hinta INTEGER);
+CREATE TABLE Products (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',8);
-INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',6);
-INSERT INTO Tuotteet (name,hinta) VALUES ('porkkana',2);
+INSERT INTO Products (name,price) VALUES ('celery',5);
+INSERT INTO Products (name,price) VALUES ('turnip',8);
+INSERT INTO Products (name,price) VALUES ('cucumber',6);
+INSERT INTO Products (name,price) VALUES ('carrot',2);
 
 RESULT
-selleri|10
-lanttu|16
-nauris|12
-porkkana|4
+celery|10
+turnip|16
+cucumber|12
+carrot|4
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('ananas',4);
-INSERT INTO Tuotteet (name,hinta) VALUES ('banaani',8);
-INSERT INTO Tuotteet (name,hinta) VALUES ('peruna',5);
+INSERT INTO Products (name,price) VALUES ('pineapple',4);
+INSERT INTO Products (name,price) VALUES ('banana',8);
+INSERT INTO Products (name,price) VALUES ('potato',5);
 
 RESULT
-ananas|8
-banaani|16
-peruna|10
+pineapple|8
+banana|16
+potato|10

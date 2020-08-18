@@ -1,20 +1,19 @@
 TASK
-Hae sanat järjestettynä niin,
-että kirjainkoolla ei ole merkitystä.
-Jokainen sana muodostuu kirjaimista
-a–z ja A–Z.
+Get the words in alphabetical order,
+without case sensitivity.
+Each word consists of letters a-z and A-Z.
 
 STRICT
 
 TABLES
-CREATE TABLE Sanat (id INTEGER PRIMARY KEY, sana TEXT);
+CREATE TABLE Words (id INTEGER PRIMARY KEY, word TEXT);
 
 TEST
-INSERT INTO Sanat(sana) VALUES ('Liisa');
-INSERT INTO Sanat(sana) VALUES ('Maija');
-INSERT INTO Sanat(sana) VALUES ('Uolevi');
-INSERT INTO Sanat(sana) VALUES ('apina');
-INSERT INTO Sanat(sana) VALUES ('omena');
+INSERT INTO Words(word) VALUES ('Liisa');
+INSERT INTO Words(word) VALUES ('Maija');
+INSERT INTO Words(word) VALUES ('Uolevi');
+INSERT INTO Words(word) VALUES ('apina');
+INSERT INTO Words(word) VALUES ('omena');
 
 RESULT
 apina
@@ -24,11 +23,11 @@ omena
 Uolevi
 
 TEST
-INSERT INTO Sanat(sana) VALUES ('Helsinki');
-INSERT INTO Sanat(sana) VALUES ('apina');
-INSERT INTO Sanat(sana) VALUES ('Tukholma');
-INSERT INTO Sanat(sana) VALUES ('omena');
-INSERT INTO Sanat(sana) VALUES ('Tallinna');
+INSERT INTO Words(word) VALUES ('Helsinki');
+INSERT INTO Words(word) VALUES ('apina');
+INSERT INTO Words(word) VALUES ('Tukholma');
+INSERT INTO Words(word) VALUES ('omena');
+INSERT INTO Words(word) VALUES ('Tallinna');
 
 RESULT
 apina

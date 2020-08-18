@@ -1,7 +1,8 @@
 TASK
-Hae elokuvien nimet ja julkaisuvuodet ensisijaisesti käänteisessä
-järjestyksessä julkaisuvuoden mukaan,
-toissijaisesti aakkosjärjestyksessä.
+Get the names and publication years of movies, 
+primarily in reverse order according to the publication year, 
+secondarily in alphabetical order.
+
 
 STRICT
 

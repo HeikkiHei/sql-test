@@ -1,20 +1,20 @@
 TASK
-Hae jokaisesta kaupungista, montako lentoa sieltä lähtee
-(myös vaikka ei olisi lentoja).
+For each city, get the amount of flights departing.
+(Even if there are no flights.)
 
 TABLES
-CREATE TABLE Kaupungit (id INTEGER PRIMARY KEY, name TEXT);
-CREATE TABLE Lennot (id INTEGER PRIMARY KEY, mista_id INTEGER, minne_id INTEGER);
+CREATE TABLE Cities (id INTEGER PRIMARY KEY, name TEXT);
+CREATE TABLE Flights (id INTEGER PRIMARY KEY, departure_id INTEGER, destination_id INTEGER);
 
 TEST
-INSERT INTO Kaupungit (name) VALUES ('Helsinki');
-INSERT INTO Kaupungit (name) VALUES ('Tukholma');
-INSERT INTO Kaupungit (name) VALUES ('Oslo');
-INSERT INTO Kaupungit (name) VALUES ('Turku');
-INSERT INTO Lennot (mista_id, minne_id) VALUES (1,2);
-INSERT INTO Lennot (mista_id, minne_id) VALUES (1,3);
-INSERT INTO Lennot (mista_id, minne_id) VALUES (2,3);
-INSERT INTO Lennot (mista_id, minne_id) VALUES (3,4);
+INSERT INTO Cities (name) VALUES ('Helsinki');
+INSERT INTO Cities (name) VALUES ('Tukholma');
+INSERT INTO Cities (name) VALUES ('Oslo');
+INSERT INTO Cities (name) VALUES ('Turku');
+INSERT INTO Flights (departure_id, destination_id) VALUES (1,2);
+INSERT INTO Flights (departure_id, destination_id) VALUES (1,3);
+INSERT INTO Flights (departure_id, destination_id) VALUES (2,3);
+INSERT INTO Flights (departure_id, destination_id) VALUES (3,4);
 
 RESULT
 Helsinki|2
@@ -23,13 +23,13 @@ Oslo|1
 Turku|0
 
 TEST
-INSERT INTO Kaupungit (name) VALUES ('Helsinki');
-INSERT INTO Kaupungit (name) VALUES ('Tukholma');
-INSERT INTO Kaupungit (name) VALUES ('Oslo');
-INSERT INTO Kaupungit (name) VALUES ('Turku');
-INSERT INTO Lennot (mista_id, minne_id) VALUES (1,2);
-INSERT INTO Lennot (mista_id, minne_id) VALUES (1,3);
-INSERT INTO Lennot (mista_id, minne_id) VALUES (1,4);
+INSERT INTO Cities (name) VALUES ('Helsinki');
+INSERT INTO Cities (name) VALUES ('Tukholma');
+INSERT INTO Cities (name) VALUES ('Oslo');
+INSERT INTO Cities (name) VALUES ('Turku');
+INSERT INTO Flights (departure_id, destination_id) VALUES (1,2);
+INSERT INTO Flights (departure_id, destination_id) VALUES (1,3);
+INSERT INTO Flights (departure_id, destination_id) VALUES (1,4);
 
 RESULT
 Helsinki|3

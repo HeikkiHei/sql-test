@@ -1,25 +1,25 @@
 TASK
-Hae kaikki eri etunimet.
+Get all the different forenames.
 
 TABLES
-CREATE TABLE Nimet (id INTEGER PRIMARY KEY, etuname TEXT, sukuname TEXT);
+CREATE TABLE Names (id INTEGER PRIMARY KEY, forename TEXT, surname TEXT);
 
 TEST
-INSERT INTO Nimet (etuname,sukuname) VALUES ('Anna','Korhonen');
-INSERT INTO Nimet (etuname,sukuname) VALUES ('Anna','Virtanen');
-INSERT INTO Nimet (etuname,sukuname) VALUES ('Pekka','Korhonen');
-INSERT INTO Nimet (etuname,sukuname) VALUES ('Pekka','Lahtinen');
-INSERT INTO Nimet (etuname,sukuname) VALUES ('Pekka','Virtanen');
+INSERT INTO Names (forename,surname) VALUES ('Anna','Korhonen');
+INSERT INTO Names (forename,surname) VALUES ('Anna','Virtanen');
+INSERT INTO Names (forename,surname) VALUES ('Pekka','Korhonen');
+INSERT INTO Names (forename,surname) VALUES ('Pekka','Lahtinen');
+INSERT INTO Names (forename,surname) VALUES ('Pekka','Virtanen');
 
 RESULT
 Anna
 Pekka
 
 TEST
-INSERT INTO Nimet (etuname,sukuname) VALUES ('Anna','Korhonen');
-INSERT INTO Nimet (etuname,sukuname) VALUES ('Pekka','Korhonen');
-INSERT INTO Nimet (etuname,sukuname) VALUES ('Uolevi','Korhonen');
-INSERT INTO Nimet (etuname,sukuname) VALUES ('Uolevi','Lahtinen');
+INSERT INTO Names (forename,surname) VALUES ('Anna','Korhonen');
+INSERT INTO Names (forename,surname) VALUES ('Pekka','Korhonen');
+INSERT INTO Names (forename,surname) VALUES ('Uolevi','Korhonen');
+INSERT INTO Names (forename,surname) VALUES ('Uolevi','Lahtinen');
 
 RESULT
 Anna

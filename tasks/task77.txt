@@ -1,39 +1,39 @@
 TASK
-Laske tulosten <i>mediaani</i>
-(eli keskimmäinen tulos, kun tulokset on järjestetty pienimmästä suurimpaan).
-Voit olettaa, että tulosten määrä on pariton.
+Calculate the <i>median</i>
+(the middle score, when results are in order from smallest to largest).
+You can assume an odd amount of results.
 
 TABLES
-CREATE TABLE Tulokset (id INTEGER PRIMARY KEY, tulos INTEGER);
+CREATE TABLE Results (id INTEGER PRIMARY KEY, score INTEGER);
 
 TEST
-INSERT INTO Tulokset (tulos) VALUES (5);
-INSERT INTO Tulokset (tulos) VALUES (2);
-INSERT INTO Tulokset (tulos) VALUES (3);
-INSERT INTO Tulokset (tulos) VALUES (5);
-INSERT INTO Tulokset (tulos) VALUES (2);
-INSERT INTO Tulokset (tulos) VALUES (6);
-INSERT INTO Tulokset (tulos) VALUES (5);
+INSERT INTO Results (score) VALUES (5);
+INSERT INTO Results (score) VALUES (2);
+INSERT INTO Results (score) VALUES (3);
+INSERT INTO Results (score) VALUES (5);
+INSERT INTO Results (score) VALUES (2);
+INSERT INTO Results (score) VALUES (6);
+INSERT INTO Results (score) VALUES (5);
 
 RESULT
 5
 
 TEST
-INSERT INTO Tulokset (tulos) VALUES (3);
-INSERT INTO Tulokset (tulos) VALUES (4);
-INSERT INTO Tulokset (tulos) VALUES (2);
-INSERT INTO Tulokset (tulos) VALUES (4);
-INSERT INTO Tulokset (tulos) VALUES (3);
+INSERT INTO Results (score) VALUES (3);
+INSERT INTO Results (score) VALUES (4);
+INSERT INTO Results (score) VALUES (2);
+INSERT INTO Results (score) VALUES (4);
+INSERT INTO Results (score) VALUES (3);
 
 RESULT
 3
 
 TEST
-INSERT INTO Tulokset (tulos) VALUES (1);
-INSERT INTO Tulokset (tulos) VALUES (2);
-INSERT INTO Tulokset (tulos) VALUES (3);
-INSERT INTO Tulokset (tulos) VALUES (4);
-INSERT INTO Tulokset (tulos) VALUES (5);
+INSERT INTO Results (score) VALUES (1);
+INSERT INTO Results (score) VALUES (2);
+INSERT INTO Results (score) VALUES (3);
+INSERT INTO Results (score) VALUES (4);
+INSERT INTO Results (score) VALUES (5);
 
 RESULT
 3

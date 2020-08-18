@@ -1,22 +1,22 @@
 TASK
-Hae työntekijöiden yhteispalkka.
+Get the sum of the employees' salaries.
 
 TABLES
-CREATE TABLE Tyontekijat (id INTEGER PRIMARY KEY, name TEXT, palkka INTEGER);
+CREATE TABLE Employees (id INTEGER PRIMARY KEY, name TEXT, salary INTEGER);
 
 TEST
-INSERT INTO Tyontekijat (name,palkka) VALUES ('Uolevi',2500);
-INSERT INTO Tyontekijat (name,palkka) VALUES ('Maija',3000);
-INSERT INTO Tyontekijat (name,palkka) VALUES ('Liisa',5000);
-INSERT INTO Tyontekijat (name,palkka) VALUES ('Kaaleppi',1500);
+INSERT INTO Employees (name,salary) VALUES ('Uolevi',2500);
+INSERT INTO Employees (name,salary) VALUES ('Maija',3000);
+INSERT INTO Employees (name,salary) VALUES ('Liisa',5000);
+INSERT INTO Employees (name,salary) VALUES ('Kaaleppi',1500);
 
 RESULT
 12000
 
 TEST
-INSERT INTO Tyontekijat (name,palkka) VALUES ('Kotivalo',2000);
-INSERT INTO Tyontekijat (name,palkka) VALUES ('Justiina',7000);
-INSERT INTO Tyontekijat (name,palkka) VALUES ('Vihtori',1000);
+INSERT INTO Employees (name,salary) VALUES ('Kotivalo',2000);
+INSERT INTO Employees (name,salary) VALUES ('Justiina',7000);
+INSERT INTO Employees (name,salary) VALUES ('Vihtori',1000);
 
 RESULT
 10000

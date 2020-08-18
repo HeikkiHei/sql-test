@@ -1,17 +1,17 @@
 TASK
-Pelaajat jaetaan joukkueisiin niin,
-että aakkosjärjestyksessä joka toinen pelaaja kuuluu
-joukkueeseen 1 ja 2. Ilmoita joukkuejako
-annetuille pelaajille.
+Players are divided into teams so,
+that in alphabetical order,
+every other player belongs to team 1. and team 2.
+Give the team division for the given players.
 
 TABLES
-CREATE TABLE Pelaajat (id INTEGER PRIMARY KEY, name TEXT);
+CREATE TABLE Players (id INTEGER PRIMARY KEY, name TEXT);
 
 TEST
-INSERT INTO Pelaajat(name) VALUES ('Uolevi');
-INSERT INTO Pelaajat(name) VALUES ('Maija');
-INSERT INTO Pelaajat(name) VALUES ('Liisa');
-INSERT INTO Pelaajat(name) VALUES ('Kaaleppi');
+INSERT INTO Players(name) VALUES ('Uolevi');
+INSERT INTO Players(name) VALUES ('Maija');
+INSERT INTO Players(name) VALUES ('Liisa');
+INSERT INTO Players(name) VALUES ('Kaaleppi');
 
 RESULT
 Kaaleppi|1
@@ -20,13 +20,13 @@ Maija|1
 Uolevi|2
 
 TEST
-INSERT INTO Pelaajat(name) VALUES ('Uolevi');
-INSERT INTO Pelaajat(name) VALUES ('Maija');
-INSERT INTO Pelaajat(name) VALUES ('Liisa');
-INSERT INTO Pelaajat(name) VALUES ('Kaaleppi');
-INSERT INTO Pelaajat(name) VALUES ('Vihtori');
-INSERT INTO Pelaajat(name) VALUES ('Justiina');
-INSERT INTO Pelaajat(name) VALUES ('Kotivalo');
+INSERT INTO Players(name) VALUES ('Uolevi');
+INSERT INTO Players(name) VALUES ('Maija');
+INSERT INTO Players(name) VALUES ('Liisa');
+INSERT INTO Players(name) VALUES ('Kaaleppi');
+INSERT INTO Players(name) VALUES ('Vihtori');
+INSERT INTO Players(name) VALUES ('Justiina');
+INSERT INTO Players(name) VALUES ('Kotivalo');
 
 RESULT
 Justiina|1

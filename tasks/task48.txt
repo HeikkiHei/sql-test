@@ -1,25 +1,25 @@
 TASK
-Laske jokaisen tilauksen yhteishinta.
+Get the total price for each order.
 
 TABLES
-CREATE TABLE Tilaukset (id INTEGER PRIMARY KEY, tuote TEXT, hinta INTEGER, maara INTEGER);
+CREATE TABLE Orders (id INTEGER PRIMARY KEY, product TEXT, price INTEGER, amount INTEGER);
 
 TEST
-INSERT INTO Tilaukset (tuote,hinta,maara) VALUES ('lanttu',4,10);
-INSERT INTO Tilaukset (tuote,hinta,maara) VALUES ('selleri',7,20);
-INSERT INTO Tilaukset (tuote,hinta,maara) VALUES ('nauris',5,15);
+INSERT INTO Orders (product,price,amount) VALUES ('turnip',4,10);
+INSERT INTO Orders (product,price,amount) VALUES ('celery',7,20);
+INSERT INTO Orders (product,price,amount) VALUES ('cucumber',5,15);
 
 RESULT
-lanttu|40
-selleri|140
-nauris|75
+turnip|40
+celery|140
+cucumber|75
 
 TEST
-INSERT INTO Tilaukset (tuote,hinta,maara) VALUES ('lanttu',4,1);
-INSERT INTO Tilaukset (tuote,hinta,maara) VALUES ('lanttu',4,10);
-INSERT INTO Tilaukset (tuote,hinta,maara) VALUES ('lanttu',4,100);
+INSERT INTO Orders (product,price,amount) VALUES ('turnip',4,1);
+INSERT INTO Orders (product,price,amount) VALUES ('turnip',4,10);
+INSERT INTO Orders (product,price,amount) VALUES ('turnip',4,100);
 
 RESULT
-lanttu|4
-lanttu|40
-lanttu|400
+turnip|4
+turnip|40
+turnip|400

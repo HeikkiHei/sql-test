@@ -1,28 +1,27 @@
 TASK
-Hae sanat järjestettynä ensisijaisesti pituuden mukaan
-ja toissijaisesti aakkosjärjestyksen mukaan.
+Get all the words ordered primarily by length and secondarily by alphabetical order.
 
 STRICT
 
 TABLES
-CREATE TABLE Sanat (id INTEGER PRIMARY KEY, sana TEXT);
+CREATE TABLE Words (id INTEGER PRIMARY KEY, word TEXT);
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('banaani');
-INSERT INTO Sanat (sana) VALUES ('aakkonen');
-INSERT INTO Sanat (sana) VALUES ('cembalo');
+INSERT INTO Words (word) VALUES ('banana');
+INSERT INTO Words (word) VALUES ('aakkonen');
+INSERT INTO Words (word) VALUES ('cembalo');
 
 RESULT
-banaani
+banana
 cembalo
 aakkonen
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('katu');
-INSERT INTO Sanat (sana) VALUES ('kala');
-INSERT INTO Sanat (sana) VALUES ('pelle');
-INSERT INTO Sanat (sana) VALUES ('apina');
-INSERT INTO Sanat (sana) VALUES ('hai');
+INSERT INTO Words (word) VALUES ('katu');
+INSERT INTO Words (word) VALUES ('kala');
+INSERT INTO Words (word) VALUES ('pelle');
+INSERT INTO Words (word) VALUES ('apina');
+INSERT INTO Words (word) VALUES ('hai');
 
 RESULT
 hai

@@ -1,29 +1,28 @@
 TASK
-Hae kaikki sanat paitsi aakkosjärjestyksessä ensimmäinen.
-
-Voit olettaa, että taulussa ei ole kahta samaa sanaa.
+Get all the words except the first word in alphabetical order.
+You can assume that words don't repeat.
 
 TABLES
-CREATE TABLE Sanat (id INTEGER PRIMARY KEY, sana TEXT);
+CREATE TABLE Words (id INTEGER PRIMARY KEY, word TEXT);
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('apina');
-INSERT INTO Sanat (sana) VALUES ('banaani');
-INSERT INTO Sanat (sana) VALUES ('cembalo');
+INSERT INTO Words (word) VALUES ('apina');
+INSERT INTO Words (word) VALUES ('banana');
+INSERT INTO Words (word) VALUES ('cembalo');
 
 RESULT
-banaani
+banana
 cembalo
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('selleri');
-INSERT INTO Sanat (sana) VALUES ('lanttu');
-INSERT INTO Sanat (sana) VALUES ('nauris');
-INSERT INTO Sanat (sana) VALUES ('peruna');
-INSERT INTO Sanat (sana) VALUES ('porkkana');
+INSERT INTO Words (word) VALUES ('celery');
+INSERT INTO Words (word) VALUES ('turnip');
+INSERT INTO Words (word) VALUES ('cucumber');
+INSERT INTO Words (word) VALUES ('potato');
+INSERT INTO Words (word) VALUES ('carrot');
 
 RESULT
-selleri
-nauris
-peruna
-porkkana
+celery
+cucumber
+potato
+turnip

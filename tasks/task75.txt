@@ -1,28 +1,28 @@
 TASK
-Laske jokaiselle opiskelijalle,
-montako lähetystä enimmillään hän on lähettänyt samaan tehtävään.
+For each student, calculate how many
+transmissions they have sent to a single exercise at the most.
 
 TABLES
-CREATE TABLE Opiskelijat (id INTEGER PRIMARY KEY, name TEXT);
-CREATE TABLE Tehtavat (id INTEGER PRIMARY KEY, name TEXT);
-CREATE TABLE Lahetykset (id INTEGER PRIMARY KEY, opiskelija_id INTEGER, tehtava_id INTEGER, tila INTEGER);
+CREATE TABLE Students (id INTEGER PRIMARY KEY, name TEXT);
+CREATE TABLE Exercises (id INTEGER PRIMARY KEY, name TEXT);
+CREATE TABLE Transmissions (id INTEGER PRIMARY KEY, student_id INTEGER, exercise_id INTEGER, state INTEGER);
 
 TEST
-INSERT INTO Opiskelijat (name) VALUES ('Uolevi');
-INSERT INTO Opiskelijat (name) VALUES ('Maija');
-INSERT INTO Opiskelijat (name) VALUES ('Kaaleppi');
-INSERT INTO Tehtavat (name) VALUES ('T1');
-INSERT INTO Tehtavat (name) VALUES ('T2');
-INSERT INTO Tehtavat (name) VALUES ('T3');
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (1,1,0);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (2,1,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (1,2,0);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (1,1,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (2,2,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (2,3,0);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (1,2,0);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (2,2,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (2,2,1);
+INSERT INTO Students (name) VALUES ('Uolevi');
+INSERT INTO Students (name) VALUES ('Maija');
+INSERT INTO Students (name) VALUES ('Kaaleppi');
+INSERT INTO Exercises (name) VALUES ('T1');
+INSERT INTO Exercises (name) VALUES ('T2');
+INSERT INTO Exercises (name) VALUES ('T3');
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (1,1,0);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (2,1,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (1,2,0);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (1,1,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (2,2,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (2,3,0);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (1,2,0);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (2,2,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (2,2,1);
 
 RESULT
 Uolevi|2
@@ -30,22 +30,22 @@ Maija|3
 Kaaleppi|0
 
 TEST
-INSERT INTO Opiskelijat (name) VALUES ('Uolevi');
-INSERT INTO Opiskelijat (name) VALUES ('Maija');
-INSERT INTO Opiskelijat (name) VALUES ('Kaaleppi');
-INSERT INTO Tehtavat (name) VALUES ('T1');
-INSERT INTO Tehtavat (name) VALUES ('T2');
-INSERT INTO Tehtavat (name) VALUES ('T3');
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (1,1,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (1,1,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (1,1,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (1,1,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (2,1,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (2,2,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (2,3,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (3,1,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (3,3,1);
-INSERT INTO Lahetykset (opiskelija_id,tehtava_id,tila) VALUES (3,1,1);
+INSERT INTO Students (name) VALUES ('Uolevi');
+INSERT INTO Students (name) VALUES ('Maija');
+INSERT INTO Students (name) VALUES ('Kaaleppi');
+INSERT INTO Exercises (name) VALUES ('T1');
+INSERT INTO Exercises (name) VALUES ('T2');
+INSERT INTO Exercises (name) VALUES ('T3');
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (1,1,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (1,1,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (1,1,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (1,1,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (2,1,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (2,2,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (2,3,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (3,1,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (3,3,1);
+INSERT INTO Transmissions (student_id,exercise_id,state) VALUES (3,1,1);
 
 RESULT
 Uolevi|4

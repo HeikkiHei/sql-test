@@ -1,20 +1,20 @@
 TASK
-Laske jokaisen tilin saldo tapahtumien perusteella
-(jokaisen tilin saldo on aluksi 0).
+Calculate the saldo of each account based on the transactions.
+(Each account starts with 0.)
 
 TABLES
-CREATE TABLE Tilit (id INTEGER PRIMARY KEY, haltija TEXT);
-CREATE TABLE Tapahtumat (id INTEGER PRIMARY KEY, tili_id INTEGER, muutos INTEGER);
+CREATE TABLE Accounts (id INTEGER PRIMARY KEY, owner TEXT);
+CREATE TABLE Transactions (id INTEGER PRIMARY KEY, account_id INTEGER, change INTEGER);
 
 TEST
-INSERT INTO Tilit (haltija) VALUES ('Uolevi');
-INSERT INTO Tilit (haltija) VALUES ('Maija');
-INSERT INTO Tilit (haltija) VALUES ('Kaaleppi');
-INSERT INTO Tapahtumat (tili_id,muutos) VALUES (1,500);
-INSERT INTO Tapahtumat (tili_id,muutos) VALUES (2,300);
-INSERT INTO Tapahtumat (tili_id,muutos) VALUES (1,-100);
-INSERT INTO Tapahtumat (tili_id,muutos) VALUES (2,100);
-INSERT INTO Tapahtumat (tili_id,muutos) VALUES (2,-300);
+INSERT INTO Accounts (owner) VALUES ('Uolevi');
+INSERT INTO Accounts (owner) VALUES ('Maija');
+INSERT INTO Accounts (owner) VALUES ('Kaaleppi');
+INSERT INTO Transactions (account_id,change) VALUES (1,500);
+INSERT INTO Transactions (account_id,change) VALUES (2,300);
+INSERT INTO Transactions (account_id,change) VALUES (1,-100);
+INSERT INTO Transactions (account_id,change) VALUES (2,100);
+INSERT INTO Transactions (account_id,change) VALUES (2,-300);
 
 RESULT
 Uolevi|400
@@ -22,14 +22,14 @@ Maija|100
 Kaaleppi|0
 
 TEST
-INSERT INTO Tilit (haltija) VALUES ('Uolevi');
-INSERT INTO Tilit (haltija) VALUES ('Maija');
-INSERT INTO Tilit (haltija) VALUES ('Kaaleppi');
-INSERT INTO Tapahtumat (tili_id,muutos) VALUES (1,100);
-INSERT INTO Tapahtumat (tili_id,muutos) VALUES (1,200);
-INSERT INTO Tapahtumat (tili_id,muutos) VALUES (1,300);
-INSERT INTO Tapahtumat (tili_id,muutos) VALUES (1,400);
-INSERT INTO Tapahtumat (tili_id,muutos) VALUES (1,-500);
+INSERT INTO Accounts (owner) VALUES ('Uolevi');
+INSERT INTO Accounts (owner) VALUES ('Maija');
+INSERT INTO Accounts (owner) VALUES ('Kaaleppi');
+INSERT INTO Transactions (account_id,change) VALUES (1,100);
+INSERT INTO Transactions (account_id,change) VALUES (1,200);
+INSERT INTO Transactions (account_id,change) VALUES (1,300);
+INSERT INTO Transactions (account_id,change) VALUES (1,400);
+INSERT INTO Transactions (account_id,change) VALUES (1,-500);
 
 RESULT
 Uolevi|500

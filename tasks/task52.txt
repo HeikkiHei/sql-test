@@ -1,38 +1,38 @@
 TASK
-Hae kaikki tuotteet, joiden hinta on enintään kaksinkertainen
-halvimpaan hintaan verrattuna.
+Get all the products whose price is at most double of the cheapest one.
+(Including the cheapest one.)
 
 TABLES
-CREATE TABLE Tuotteet (id INTEGER PRIMARY KEY, name TEXT, hinta INTEGER);
+CREATE TABLE Products (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',7);
-INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',3);
-INSERT INTO Tuotteet (name,hinta) VALUES ('retiisi',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',6);
+INSERT INTO Products (name,price) VALUES ('celery',7);
+INSERT INTO Products (name,price) VALUES ('turnip',3);
+INSERT INTO Products (name,price) VALUES ('radish',5);
+INSERT INTO Products (name,price) VALUES ('cucumber',6);
 
 RESULT
-lanttu
-retiisi
-nauris
+turnip
+radish
+cucumber
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',7);
-INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',2);
-INSERT INTO Tuotteet (name,hinta) VALUES ('retiisi',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',6);
+INSERT INTO Products (name,price) VALUES ('celery',7);
+INSERT INTO Products (name,price) VALUES ('turnip',2);
+INSERT INTO Products (name,price) VALUES ('radish',5);
+INSERT INTO Products (name,price) VALUES ('cucumber',6);
 
 RESULT
-lanttu
+turnip
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',6);
-INSERT INTO Tuotteet (name,hinta) VALUES ('retiisi',7);
-INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',8);
+INSERT INTO Products (name,price) VALUES ('celery',5);
+INSERT INTO Products (name,price) VALUES ('turnip',6);
+INSERT INTO Products (name,price) VALUES ('radish',7);
+INSERT INTO Products (name,price) VALUES ('cucumber',8);
 
 RESULT
-selleri
-lanttu
-retiisi
-nauris
+celery
+turnip
+radish
+cucumber

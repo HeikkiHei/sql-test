@@ -1,36 +1,36 @@
 TASK
-Hae kaikki tuotteet, joiden hintaa ei ole millään muulla tuotteella.
+Get the products which do not share their price with other products.
 
 TABLES
-CREATE TABLE Tuotteet (id INTEGER PRIMARY KEY, name TEXT, hinta INTEGER);
+CREATE TABLE Products (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',3);
-INSERT INTO Tuotteet (name,hinta) VALUES ('retiisi',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',6);
+INSERT INTO Products (name,price) VALUES ('celery',5);
+INSERT INTO Products (name,price) VALUES ('turnip',3);
+INSERT INTO Products (name,price) VALUES ('radish',5);
+INSERT INTO Products (name,price) VALUES ('cucumber',6);
 
 RESULT
-lanttu
-nauris
+turnip
+cucumber
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',2);
-INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',2);
-INSERT INTO Tuotteet (name,hinta) VALUES ('retiisi',3);
-INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',2);
+INSERT INTO Products (name,price) VALUES ('celery',2);
+INSERT INTO Products (name,price) VALUES ('turnip',2);
+INSERT INTO Products (name,price) VALUES ('radish',3);
+INSERT INTO Products (name,price) VALUES ('cucumber',2);
 
 RESULT
-retiisi
+radish
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',1);
-INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',2);
-INSERT INTO Tuotteet (name,hinta) VALUES ('retiisi',3);
-INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',4);
+INSERT INTO Products (name,price) VALUES ('celery',1);
+INSERT INTO Products (name,price) VALUES ('turnip',2);
+INSERT INTO Products (name,price) VALUES ('radish',3);
+INSERT INTO Products (name,price) VALUES ('cucumber',4);
 
 RESULT
-selleri
-lanttu
-retiisi
-nauris
+celery
+turnip
+radish
+cucumber

@@ -1,22 +1,22 @@
 TASK
-Hae kaikki sanat, joiden pituus on alle 6 merkkiä.
+Get all the words with length less than 6.
 
 TABLES
-CREATE TABLE Sanat (id INTEGER PRIMARY KEY, sana TEXT);
+CREATE TABLE Words (id INTEGER PRIMARY KEY, word TEXT);
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('apina');
-INSERT INTO Sanat (sana) VALUES ('banaani');
-INSERT INTO Sanat (sana) VALUES ('cembalo');
+INSERT INTO Words (word) VALUES ('apina');
+INSERT INTO Words (word) VALUES ('banana');
+INSERT INTO Words (word) VALUES ('cembalo');
 
 RESULT
 apina
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('Uolevi');
-INSERT INTO Sanat (sana) VALUES ('Maija');
-INSERT INTO Sanat (sana) VALUES ('Vihtori');
-INSERT INTO Sanat (sana) VALUES ('Anna');
+INSERT INTO Words (word) VALUES ('Uolevi');
+INSERT INTO Words (word) VALUES ('Maija');
+INSERT INTO Words (word) VALUES ('Vihtori');
+INSERT INTO Words (word) VALUES ('Anna');
 
 RESULT
 Maija

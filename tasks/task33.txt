@@ -1,19 +1,19 @@
 TASK
-Hae tiedot kaikista lentoyhteyksistä.
+Get the information about all the flights.
 
 TABLES
-CREATE TABLE Kaupungit (id INTEGER PRIMARY KEY, name TEXT);
-CREATE TABLE Lennot (id INTEGER PRIMARY KEY, mista_id INTEGER, minne_id INTEGER);
+CREATE TABLE Cities (id INTEGER PRIMARY KEY, name TEXT);
+CREATE TABLE Flights (id INTEGER PRIMARY KEY, departure_id INTEGER, destination_id INTEGER);
 
 TEST
-INSERT INTO Kaupungit (name) VALUES ('Helsinki');
-INSERT INTO Kaupungit (name) VALUES ('Tukholma');
-INSERT INTO Kaupungit (name) VALUES ('Oslo');
-INSERT INTO Kaupungit (name) VALUES ('Turku');
-INSERT INTO Lennot (mista_id, minne_id) VALUES (1,2);
-INSERT INTO Lennot (mista_id, minne_id) VALUES (1,3);
-INSERT INTO Lennot (mista_id, minne_id) VALUES (2,3);
-INSERT INTO Lennot (mista_id, minne_id) VALUES (2,4);
+INSERT INTO Cities (name) VALUES ('Helsinki');
+INSERT INTO Cities (name) VALUES ('Tukholma');
+INSERT INTO Cities (name) VALUES ('Oslo');
+INSERT INTO Cities (name) VALUES ('Turku');
+INSERT INTO Flights (departure_id, destination_id) VALUES (1,2);
+INSERT INTO Flights (departure_id, destination_id) VALUES (1,3);
+INSERT INTO Flights (departure_id, destination_id) VALUES (2,3);
+INSERT INTO Flights (departure_id, destination_id) VALUES (2,4);
 
 RESULT
 Helsinki|Tukholma
@@ -22,13 +22,13 @@ Tukholma|Oslo
 Tukholma|Turku
 
 TEST
-INSERT INTO Kaupungit (name) VALUES ('Helsinki');
-INSERT INTO Kaupungit (name) VALUES ('Tukholma');
-INSERT INTO Kaupungit (name) VALUES ('Oslo');
-INSERT INTO Lennot (mista_id, minne_id) VALUES (1,2);
-INSERT INTO Lennot (mista_id, minne_id) VALUES (2,1);
-INSERT INTO Lennot (mista_id, minne_id) VALUES (1,3);
-INSERT INTO Lennot (mista_id, minne_id) VALUES (3,1);
+INSERT INTO Cities (name) VALUES ('Helsinki');
+INSERT INTO Cities (name) VALUES ('Tukholma');
+INSERT INTO Cities (name) VALUES ('Oslo');
+INSERT INTO Flights (departure_id, destination_id) VALUES (1,2);
+INSERT INTO Flights (departure_id, destination_id) VALUES (2,1);
+INSERT INTO Flights (departure_id, destination_id) VALUES (1,3);
+INSERT INTO Flights (departure_id, destination_id) VALUES (3,1);
 
 RESULT
 Helsinki|Tukholma

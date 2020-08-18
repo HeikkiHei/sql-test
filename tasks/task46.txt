@@ -1,13 +1,13 @@
 TASK
-Hae käyttäjien koko nimet yhtenä sarakkeena.
+Get the whole names of users as one column.
 
 TABLES
-CREATE TABLE Kayttajat (id INTEGER PRIMARY KEY, etuname TEXT, sukuname TEXT);
+CREATE TABLE Users (id INTEGER PRIMARY KEY, forename TEXT, surname TEXT);
 
 TEST
-INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Liisa','Virtanen');
-INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Anna','Korhonen');
-INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Kalle','Ojala');
+INSERT INTO Users (forename,surname) VALUES ('Liisa','Virtanen');
+INSERT INTO Users (forename,surname) VALUES ('Anna','Korhonen');
+INSERT INTO Users (forename,surname) VALUES ('Kalle','Ojala');
 
 RESULT
 Liisa Virtanen
@@ -15,9 +15,9 @@ Anna Korhonen
 Kalle Ojala
 
 TEST
-INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Liisa','Korhonen');
-INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Anna','Ojala');
-INSERT INTO Kayttajat (etuname,sukuname) VALUES ('Kalle','Virtanen');
+INSERT INTO Users (forename,surname) VALUES ('Liisa','Korhonen');
+INSERT INTO Users (forename,surname) VALUES ('Anna','Ojala');
+INSERT INTO Users (forename,surname) VALUES ('Kalle','Virtanen');
 
 RESULT
 Liisa Korhonen

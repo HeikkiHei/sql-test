@@ -1,19 +1,18 @@
 TASK
-Jokaisesta varauksesta on tiedossa alkupäivä ja loppupäivä.
-Kaksi varausta ovat päällekkäin, jos jokin päivä kuuluu
-kumpaankin varaukseen.
-Laske jokaiselle varaukselle, moniko toinen varaus menee
-päällekkäin sen kanssa.
+Each reservation has a known start and end dates.
+Two reservations overlap, if some day is on both reservations.
+For each reservation, calculate how many other reservations
+overlap with it.
 
 TABLES
-CREATE TABLE Varaukset (id INTEGER PRIMARY KEY, alku INTEGER, loppu INTEGER);
+CREATE TABLE Reservations (id INTEGER PRIMARY KEY, start INTEGER, end INTEGER);
 
 TEST
-INSERT INTO Varaukset(alku,loppu) VALUES (2,5);
-INSERT INTO Varaukset(alku,loppu) VALUES (1,10);
-INSERT INTO Varaukset(alku,loppu) VALUES (6,7);
-INSERT INTO Varaukset(alku,loppu) VALUES (6,8);
-INSERT INTO Varaukset(alku,loppu) VALUES (5,6);
+INSERT INTO Reservations(start,end) VALUES (2,5);
+INSERT INTO Reservations(start,end) VALUES (1,10);
+INSERT INTO Reservations(start,end) VALUES (6,7);
+INSERT INTO Reservations(start,end) VALUES (6,8);
+INSERT INTO Reservations(start,end) VALUES (5,6);
 
 RESULT
 1|2
@@ -23,10 +22,10 @@ RESULT
 5|4
 
 TEST
-INSERT INTO Varaukset(alku,loppu) VALUES (1,1);
-INSERT INTO Varaukset(alku,loppu) VALUES (2,3);
-INSERT INTO Varaukset(alku,loppu) VALUES (4,6);
-INSERT INTO Varaukset(alku,loppu) VALUES (7,10);
+INSERT INTO Reservations(start,end) VALUES (1,1);
+INSERT INTO Reservations(start,end) VALUES (2,3);
+INSERT INTO Reservations(start,end) VALUES (4,6);
+INSERT INTO Reservations(start,end) VALUES (7,10);
 
 RESULT
 1|0
@@ -35,10 +34,10 @@ RESULT
 4|0
 
 TEST
-INSERT INTO Varaukset(alku,loppu) VALUES (1,5);
-INSERT INTO Varaukset(alku,loppu) VALUES (1,5);
-INSERT INTO Varaukset(alku,loppu) VALUES (1,5);
-INSERT INTO Varaukset(alku,loppu) VALUES (1,5);
+INSERT INTO Reservations(start,end) VALUES (1,5);
+INSERT INTO Reservations(start,end) VALUES (1,5);
+INSERT INTO Reservations(start,end) VALUES (1,5);
+INSERT INTO Reservations(start,end) VALUES (1,5);
 
 RESULT
 1|3
@@ -47,12 +46,12 @@ RESULT
 4|3
 
 TEST
-INSERT INTO Varaukset(alku,loppu) VALUES (1,4);
-INSERT INTO Varaukset(alku,loppu) VALUES (8,10);
-INSERT INTO Varaukset(alku,loppu) VALUES (2,9);
-INSERT INTO Varaukset(alku,loppu) VALUES (5,6);
-INSERT INTO Varaukset(alku,loppu) VALUES (11,15);
-INSERT INTO Varaukset(alku,loppu) VALUES (2,8);
+INSERT INTO Reservations(start,end) VALUES (1,4);
+INSERT INTO Reservations(start,end) VALUES (8,10);
+INSERT INTO Reservations(start,end) VALUES (2,9);
+INSERT INTO Reservations(start,end) VALUES (5,6);
+INSERT INTO Reservations(start,end) VALUES (11,15);
+INSERT INTO Reservations(start,end) VALUES (2,8);
 
 RESULT
 1|2

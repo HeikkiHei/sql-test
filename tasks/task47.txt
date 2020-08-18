@@ -1,22 +1,22 @@
 TASK
-Hae kaikkien sanojen yhteispituus.
+Get the combined length of all the words.
 
 TABLES
-CREATE TABLE Sanat (id INTEGER PRIMARY KEY, sana TEXT);
+CREATE TABLE Words (id INTEGER PRIMARY KEY, word TEXT);
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('apina');
-INSERT INTO Sanat (sana) VALUES ('banaani');
-INSERT INTO Sanat (sana) VALUES ('cembalo');
+INSERT INTO Words (word) VALUES ('apina');
+INSERT INTO Words (word) VALUES ('banana');
+INSERT INTO Words (word) VALUES ('cembalo');
 
 RESULT
 19
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('Uolevi');
-INSERT INTO Sanat (sana) VALUES ('Maija');
-INSERT INTO Sanat (sana) VALUES ('Kaaleppi');
-INSERT INTO Sanat (sana) VALUES ('Liisa');
+INSERT INTO Words (word) VALUES ('Uolevi');
+INSERT INTO Words (word) VALUES ('Maija');
+INSERT INTO Words (word) VALUES ('Kaaleppi');
+INSERT INTO Words (word) VALUES ('Liisa');
 
 RESULT
 24

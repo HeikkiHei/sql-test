@@ -1,43 +1,43 @@
 TASK
-Laske tulosten <i>moodi</i> (eli yleisin tulos).
-Jos vaihtoehtoja on useita, valitse niistä pienin.
+Calculate the <i>mode</i> (or the most common score).
+If there are several, pick the smallest.
 
 TABLES
-CREATE TABLE Tulokset (id INTEGER PRIMARY KEY, tulos INTEGER);
+CREATE TABLE Results (id INTEGER PRIMARY KEY, score INTEGER);
 
 TEST
-INSERT INTO Tulokset (tulos) VALUES (2);
-INSERT INTO Tulokset (tulos) VALUES (2);
-INSERT INTO Tulokset (tulos) VALUES (3);
-INSERT INTO Tulokset (tulos) VALUES (5);
-INSERT INTO Tulokset (tulos) VALUES (5);
-INSERT INTO Tulokset (tulos) VALUES (5);
-INSERT INTO Tulokset (tulos) VALUES (6);
+INSERT INTO Results (score) VALUES (2);
+INSERT INTO Results (score) VALUES (2);
+INSERT INTO Results (score) VALUES (3);
+INSERT INTO Results (score) VALUES (5);
+INSERT INTO Results (score) VALUES (5);
+INSERT INTO Results (score) VALUES (5);
+INSERT INTO Results (score) VALUES (6);
 
 RESULT
 5
 
 TEST
-INSERT INTO Tulokset (tulos) VALUES (2);
-INSERT INTO Tulokset (tulos) VALUES (3);
-INSERT INTO Tulokset (tulos) VALUES (3);
-INSERT INTO Tulokset (tulos) VALUES (4);
-INSERT INTO Tulokset (tulos) VALUES (4);
-INSERT INTO Tulokset (tulos) VALUES (7);
+INSERT INTO Results (score) VALUES (2);
+INSERT INTO Results (score) VALUES (3);
+INSERT INTO Results (score) VALUES (3);
+INSERT INTO Results (score) VALUES (4);
+INSERT INTO Results (score) VALUES (4);
+INSERT INTO Results (score) VALUES (7);
 
 RESULT
 3
 
 TEST
-INSERT INTO Tulokset (tulos) VALUES (1);
-INSERT INTO Tulokset (tulos) VALUES (1);
-INSERT INTO Tulokset (tulos) VALUES (1);
-INSERT INTO Tulokset (tulos) VALUES (2);
-INSERT INTO Tulokset (tulos) VALUES (3);
-INSERT INTO Tulokset (tulos) VALUES (4);
-INSERT INTO Tulokset (tulos) VALUES (5);
-INSERT INTO Tulokset (tulos) VALUES (6);
-INSERT INTO Tulokset (tulos) VALUES (7);
+INSERT INTO Results (score) VALUES (1);
+INSERT INTO Results (score) VALUES (1);
+INSERT INTO Results (score) VALUES (1);
+INSERT INTO Results (score) VALUES (2);
+INSERT INTO Results (score) VALUES (3);
+INSERT INTO Results (score) VALUES (4);
+INSERT INTO Results (score) VALUES (5);
+INSERT INTO Results (score) VALUES (6);
+INSERT INTO Results (score) VALUES (7);
 
 RESULT
 1

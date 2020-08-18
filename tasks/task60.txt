@@ -1,38 +1,38 @@
 TASK
-Hae kaikki sanat, joissa on tasan kaksi a-kirjainta.
+Get all the words with exactly two 'a' letters.
 
 TABLES
-CREATE TABLE Sanat (id INTEGER PRIMARY KEY, sana TEXT);
+CREATE TABLE Words (id INTEGER PRIMARY KEY, word TEXT);
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('apina');
-INSERT INTO Sanat (sana) VALUES ('banaani');
-INSERT INTO Sanat (sana) VALUES ('cembalo');
+INSERT INTO Words (word) VALUES ('apina');
+INSERT INTO Words (word) VALUES ('banana');
+INSERT INTO Words (word) VALUES ('cembalo');
 
 RESULT
 apina
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('a');
-INSERT INTO Sanat (sana) VALUES ('aa');
-INSERT INTO Sanat (sana) VALUES ('aaa');
-INSERT INTO Sanat (sana) VALUES ('aaaa');
+INSERT INTO Words (word) VALUES ('a');
+INSERT INTO Words (word) VALUES ('aa');
+INSERT INTO Words (word) VALUES ('aaa');
+INSERT INTO Words (word) VALUES ('aaaa');
 
 RESULT
 aa
 
 TEST
-INSERT INTO Sanat (sana) VALUES ('aa');
-INSERT INTO Sanat (sana) VALUES ('aba');
-INSERT INTO Sanat (sana) VALUES ('abb');
-INSERT INTO Sanat (sana) VALUES ('baa');
-INSERT INTO Sanat (sana) VALUES ('bab');
-INSERT INTO Sanat (sana) VALUES ('baba');
-INSERT INTO Sanat (sana) VALUES ('abba');
-INSERT INTO Sanat (sana) VALUES ('baaa');
-INSERT INTO Sanat (sana) VALUES ('bbbb');
-INSERT INTO Sanat (sana) VALUES ('aaaa');
-INSERT INTO Sanat (sana) VALUES ('aabb');
+INSERT INTO Words (word) VALUES ('aa');
+INSERT INTO Words (word) VALUES ('aba');
+INSERT INTO Words (word) VALUES ('abb');
+INSERT INTO Words (word) VALUES ('baa');
+INSERT INTO Words (word) VALUES ('bab');
+INSERT INTO Words (word) VALUES ('baba');
+INSERT INTO Words (word) VALUES ('abba');
+INSERT INTO Words (word) VALUES ('baaa');
+INSERT INTO Words (word) VALUES ('bbbb');
+INSERT INTO Words (word) VALUES ('aaaa');
+INSERT INTO Words (word) VALUES ('aabb');
 
 RESULT
 aa

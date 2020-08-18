@@ -1,43 +1,44 @@
 TASK
-Hae jokaisesta kurssista suorittajien määrä (myös vaikka ei olisi suorituksia).
+Get the amount of graded students for each course.
+(Even if the course has no graded students.)
 
 TABLES
-CREATE TABLE Opiskelijat (id INTEGER PRIMARY KEY, name TEXT);
-CREATE TABLE Kurssit (id INTEGER PRIMARY KEY, name TEXT);
-CREATE TABLE Suoritukset (opiskelija_id INTEGER, kurssi_id INTEGER, arvosana INTEGER);
+CREATE TABLE Students (id INTEGER PRIMARY KEY, name TEXT);
+CREATE TABLE Courses (id INTEGER PRIMARY KEY, name TEXT);
+CREATE TABLE Grading (student_id INTEGER, course_id INTEGER, grade INTEGER);
 
 TEST
-INSERT INTO Opiskelijat (name) VALUES ('Uolevi');
-INSERT INTO Opiskelijat (name) VALUES ('Maija');
-INSERT INTO Opiskelijat (name) VALUES ('Kaaleppi');
-INSERT INTO Kurssit (name) VALUES ('Ohpe');
-INSERT INTO Kurssit (name) VALUES ('Ohja');
-INSERT INTO Kurssit (name) VALUES ('Tira');
-INSERT INTO Kurssit (name) VALUES ('Lama');
-INSERT INTO Suoritukset (opiskelija_id,kurssi_id,arvosana) VALUES (1,1,3);
-INSERT INTO Suoritukset (opiskelija_id,kurssi_id,arvosana) VALUES (1,2,4);
-INSERT INTO Suoritukset (opiskelija_id,kurssi_id,arvosana) VALUES (2,1,2);
-INSERT INTO Suoritukset (opiskelija_id,kurssi_id,arvosana) VALUES (2,2,5);
-INSERT INTO Suoritukset (opiskelija_id,kurssi_id,arvosana) VALUES (3,4,4);
+INSERT INTO Students (name) VALUES ('Uolevi');
+INSERT INTO Students (name) VALUES ('Maija');
+INSERT INTO Students (name) VALUES ('Kaaleppi');
+INSERT INTO Courses (name) VALUES ('Basic Coding');
+INSERT INTO Courses (name) VALUES ('Algorithms');
+INSERT INTO Courses (name) VALUES ('Databases');
+INSERT INTO Courses (name) VALUES ('Software Tools');
+INSERT INTO Grading (student_id,course_id,grade) VALUES (1,1,3);
+INSERT INTO Grading (student_id,course_id,grade) VALUES (1,2,4);
+INSERT INTO Grading (student_id,course_id,grade) VALUES (2,1,2);
+INSERT INTO Grading (student_id,course_id,grade) VALUES (2,2,5);
+INSERT INTO Grading (student_id,course_id,grade) VALUES (3,4,4);
 
 RESULT
-Ohpe|2
-Ohja|2
-Tira|0
-Lama|1
+Basic Coding|2
+Algorithms|2
+Databases|0
+Software Tools|1
 
 TEST
-INSERT INTO Opiskelijat (name) VALUES ('Uolevi');
-INSERT INTO Opiskelijat (name) VALUES ('Maija');
-INSERT INTO Opiskelijat (name) VALUES ('Kaaleppi');
-INSERT INTO Kurssit (name) VALUES ('Ohpe');
-INSERT INTO Kurssit (name) VALUES ('Ohja');
-INSERT INTO Kurssit (name) VALUES ('Tira');
-INSERT INTO Kurssit (name) VALUES ('Lama');
-INSERT INTO Suoritukset (opiskelija_id,kurssi_id,arvosana) VALUES (1,1,1);
+INSERT INTO Students (name) VALUES ('Uolevi');
+INSERT INTO Students (name) VALUES ('Maija');
+INSERT INTO Students (name) VALUES ('Kaaleppi');
+INSERT INTO Courses (name) VALUES ('Basic Coding');
+INSERT INTO Courses (name) VALUES ('Algorithms');
+INSERT INTO Courses (name) VALUES ('Databases');
+INSERT INTO Courses (name) VALUES ('Software Tools');
+INSERT INTO Grading (student_id,course_id,grade) VALUES (1,1,1);
 
 RESULT
-Ohpe|1
-Ohja|0
-Tira|0
-Lama|0
+Basic Coding|1
+Algorithms|0
+Databases|0
+Software Tools|0

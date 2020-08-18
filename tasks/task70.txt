@@ -1,23 +1,23 @@
 TASK
-Laske, mikä on pienin ero kahden tuotteen hinnassa.
+Calculate the smallest difference between two products.
 
 TABLES
-CREATE TABLE Tuotteet (id INTEGER PRIMARY KEY, name TEXT, hinta INTEGER);
+CREATE TABLE Products (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',5);
-INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',3);
-INSERT INTO Tuotteet (name,hinta) VALUES ('retiisi',8);
-INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',7);
+INSERT INTO Products (name,price) VALUES ('celery',5);
+INSERT INTO Products (name,price) VALUES ('turnip',3);
+INSERT INTO Products (name,price) VALUES ('radish',8);
+INSERT INTO Products (name,price) VALUES ('cucumber',7);
 
 RESULT
 1
 
 TEST
-INSERT INTO Tuotteet (name,hinta) VALUES ('selleri',1);
-INSERT INTO Tuotteet (name,hinta) VALUES ('lanttu',7);
-INSERT INTO Tuotteet (name,hinta) VALUES ('retiisi',15);
-INSERT INTO Tuotteet (name,hinta) VALUES ('nauris',18);
+INSERT INTO Products (name,price) VALUES ('celery',1);
+INSERT INTO Products (name,price) VALUES ('turnip',7);
+INSERT INTO Products (name,price) VALUES ('radish',15);
+INSERT INTO Products (name,price) VALUES ('cucumber',18);
 
 RESULT
 3
