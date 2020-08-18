@@ -1,5 +1,5 @@
 TASK
-Get the history for Uolevi's account saldo.
+Get the history for Uolevi's account balance.
 Transactions are in order by their id.
 
 STRICT

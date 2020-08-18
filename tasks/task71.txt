@@ -1,5 +1,5 @@
 TASK
-Calculate the saldo of each account based on the transactions.
+Calculate the balance of each account based on the transactions.
 (Each account starts with 0.)
 
 TABLES

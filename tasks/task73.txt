@@ -1,5 +1,5 @@
 TASK
-Get the largest saldo of each account during their history.
+Get the largest balance of each account during their history.
 (Each account starts at 0.)
 
 TABLES
