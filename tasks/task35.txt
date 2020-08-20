@@ -1,6 +1,6 @@
 TASK
 Get the information for each player, how many scores do they have.
-(Even if they have no scores.)).
+(Even if they have no scores.)
 
 TABLES
 CREATE TABLE Players (id INTEGER PRIMARY KEY, name TEXT);

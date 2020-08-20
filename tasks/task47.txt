@@ -10,7 +10,7 @@ INSERT INTO Words (word) VALUES ('banana');
 INSERT INTO Words (word) VALUES ('cembalo');
 
 RESULT
-19
+18
 
 TEST
 INSERT INTO Words (word) VALUES ('Uolevi');

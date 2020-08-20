@@ -1,5 +1,5 @@
 TASK
-Get the student name, course name and grade for all the gradings.
+Get the student name, course name and grade for all the course gradings.
 
 TABLES
 CREATE TABLE Students (id INTEGER PRIMARY KEY, name TEXT);

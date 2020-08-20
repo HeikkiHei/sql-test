@@ -1,5 +1,5 @@
 TASK
-For each product, get in how many different packets it appears in.
+For each product, get how many different packets it appears in.
 
 TABLES
 CREATE TABLE Products (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
