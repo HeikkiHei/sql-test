@@ -11,7 +11,7 @@ INSERT INTO Words (word) VALUES ('cembalo');
 
 RESULT
 apina|5
-banana|7
+banana|6
 cembalo|7
 
 TEST

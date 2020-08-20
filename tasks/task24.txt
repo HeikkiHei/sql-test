@@ -1,5 +1,6 @@
 TASK
-Form a score board, where all the results are ordered primarily in reverse order by score and secondarily by name.
+Form a score board, where all the results are ordered 
+primarily in reverse order by score and secondarily by name.
 
 STRICT
 

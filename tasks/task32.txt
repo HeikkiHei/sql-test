@@ -32,6 +32,8 @@ INSERT INTO Students (name) VALUES ('Maija');
 INSERT INTO Students (name) VALUES ('Kaaleppi');
 INSERT INTO Courses (name) VALUES ('Basic Coding');
 INSERT INTO Courses (name) VALUES ('Algorithms');
+INSERT INTO Courses (name) VALUES ('Databases');
+INSERT INTO Courses (name) VALUES ('Software Tools');
 INSERT INTO Grading (student_id,course_id,grade) VALUES (1,1,1);
 INSERT INTO Grading (student_id,course_id,grade) VALUES (2,1,1);
 INSERT INTO Grading (student_id,course_id,grade) VALUES (3,1,5);
