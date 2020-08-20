@@ -1,11 +1,11 @@
 TASK
-For each student get the amount of gradings.
-You can assume at least one grading for each student.
+For each student get the amount of Gradingss.
+You can assume at least one Gradings for each student.
 
 TABLES
 CREATE TABLE Students (id INTEGER PRIMARY KEY, name TEXT);
 CREATE TABLE Courses (id INTEGER PRIMARY KEY, name TEXT);
-CREATE TABLE Grading (student_id INTEGER, course_id INTEGER, grade INTEGER);
+CREATE TABLE Gradings (student_id INTEGER, course_id INTEGER, grade INTEGER);
 
 TEST
 INSERT INTO Students (name) VALUES ('Uolevi');
@@ -15,11 +15,11 @@ INSERT INTO Courses (name) VALUES ('Basic Coding');
 INSERT INTO Courses (name) VALUES ('Algorithms');
 INSERT INTO Courses (name) VALUES ('Databases');
 INSERT INTO Courses (name) VALUES ('Software Tools');
-INSERT INTO Grading (student_id,course_id,grade) VALUES (1,1,3);
-INSERT INTO Grading (student_id,course_id,grade) VALUES (1,2,4);
-INSERT INTO Grading (student_id,course_id,grade) VALUES (2,1,2);
-INSERT INTO Grading (student_id,course_id,grade) VALUES (2,4,5);
-INSERT INTO Grading (student_id,course_id,grade) VALUES (3,3,4);
+INSERT INTO Gradings (student_id,course_id,grade) VALUES (1,1,3);
+INSERT INTO Gradings (student_id,course_id,grade) VALUES (1,2,4);
+INSERT INTO Gradings (student_id,course_id,grade) VALUES (2,1,2);
+INSERT INTO Gradings (student_id,course_id,grade) VALUES (2,4,5);
+INSERT INTO Gradings (student_id,course_id,grade) VALUES (3,3,4);
 
 RESULT
 Uolevi|2
@@ -32,10 +32,10 @@ INSERT INTO Students (name) VALUES ('Maija');
 INSERT INTO Students (name) VALUES ('Kaaleppi');
 INSERT INTO Courses (name) VALUES ('Basic Coding');
 INSERT INTO Courses (name) VALUES ('Algorithms');
-INSERT INTO Grading (student_id,course_id,grade) VALUES (1,1,1);
-INSERT INTO Grading (student_id,course_id,grade) VALUES (2,1,1);
-INSERT INTO Grading (student_id,course_id,grade) VALUES (3,1,5);
-INSERT INTO Grading (student_id,course_id,grade) VALUES (3,2,5);
+INSERT INTO Gradings (student_id,course_id,grade) VALUES (1,1,1);
+INSERT INTO Gradings (student_id,course_id,grade) VALUES (2,1,1);
+INSERT INTO Gradings (student_id,course_id,grade) VALUES (3,1,5);
+INSERT INTO Gradings (student_id,course_id,grade) VALUES (3,2,5);
 
 RESULT
 Uolevi|1
