@@ -2,24 +2,26 @@ var client_id = "50c4648f34bb075578c383ec62d6908fa49b6986d992c34a2a029be777e0337
 var client_secret = "d15d4d4ba2b80a91aaff7a5c94d30fe65c87b058991a327a5de4dfe71f7c5576";
 var mooc_status = 0;
 var mooc_token;
-/*
+
 function mooc_login(username,password,callback) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
-            var response = this.responseText;
-            mooc_status = this.status == 200 && response != "ERROR" ? 1 : 2;
+            mooc_status = this.status == 200 ? 1 : 2;
             if (mooc_status == 1) {
-                mooc_token = response;
+                mooc_token = JSON.parse(this.responseText)["access_token"];
                 sessionStorage.setItem("mooc_token",mooc_token);
             }
             callback();
         }
     }
-    xhttp.open("POST","https://ahslaaks.users.cs.helsinki.fi/mooc/login.php",true);
+    xhttp.open("POST","https://tmc.mooc.fi/oauth/token",true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("username="+encodeURIComponent(username)+"&"+
-               "password="+encodeURIComponent(password));
+    xhttp.send("client_id="+client_id+"&"+
+               "client_secret="+client_secret+"&"+
+               "username="+encodeURIComponent(username)+"&"+
+               "password="+encodeURIComponent(password)+"&"+
+               "grant_type=password");
 }
 
 function mooc_logout(callback) {
@@ -29,20 +31,6 @@ function mooc_logout(callback) {
     callback();
 }
 
-function mooc_query(query,callback) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            callback(JSON.parse(this.responseText));
-        }
-    }
-
-    xhttp.open("GET",query,true);
-    xhttp.setRequestHeader("Authorization","Bearer "+mooc_token);
-    xhttp.send();
-    
-}
-*/
 function quizzes_status(callback) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -50,10 +38,8 @@ function quizzes_status(callback) {
             callback(this.responseText.split(" "));
         }
     }
-    /*
-    xhttp.open("GET","https://ahslaaks.users.cs.helsinki.fi/mooc/sql_status.php?token="+mooc_token,true);
+    xhttp.open("GET","api/sql_status.php?token="+mooc_token,true);
     xhttp.send();
-    */
 }
 
 function quizzes_send(task,sql,result,callback) {
@@ -64,14 +50,12 @@ function quizzes_send(task,sql,result,callback) {
             callback();
         }
     }
-    /*
-    xhttp.open("POST","https://ahslaaks.users.cs.helsinki.fi/mooc/sql_send.php",true);
+    xhttp.open("POST","api/sql_send.php",true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("token="+mooc_token+"&"+
                "task="+task+"&"+
                "result="+result+"&"+
                "data="+encodeURIComponent(sql));
-               */
 }
 
 function quizzes_answer(task,callback) {
@@ -81,10 +65,8 @@ function quizzes_answer(task,callback) {
             callback(this.responseText);
         }
     }
-/*    
-    xhttp.open("GET","https://ahslaaks.users.cs.helsinki.fi/mooc/sql_answer.php?token="+mooc_token+"&task="+task,true);
+    xhttp.open("GET","api/sql_answer.php?token="+mooc_token+"&task="+task,true);
     xhttp.send();
-  */  
 }
 
 function quizzes_model(task,callback) {
@@ -94,11 +76,10 @@ function quizzes_model(task,callback) {
             callback(this.responseText);
         }
     }
-    /*
-    xhttp.open("GET","https://ahslaaks.users.cs.helsinki.fi/mooc/sql_model.php?token="+mooc_token+"&task="+task,true);
+    xhttp.open("GET","api/sql_model.php?token="+mooc_token+"&task="+task,true);
     xhttp.send();
-    */
 }
+
 if (sessionStorage.getItem("mooc_token")) {
     mooc_status = 1;
     mooc_token = sessionStorage.getItem("mooc_token");

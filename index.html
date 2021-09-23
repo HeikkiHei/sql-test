@@ -369,7 +369,18 @@ function create_menu() {
     if (mooc_status == 1) {
         html += "<br>You have solved "+count+"/100 exercises.";
     }
-
+    /*
+    html += "<h2>Login</h2>";
+    if (mooc_status != 1) {
+        html += "<p>Login with MOOC.fi account:</p>";
+        html += "Username:<br><input onkeyup=\"check_submit(event)\" type=text id=\"username\"><br>";
+        html += "Password:<br><input onkeyup=\"check_submit(event)\" type=password id=\"password\"><br>";
+        html += "<br><button onclick=\"start_login()\">Log in</button>";
+    } else {
+        html += "<p>You have logged in.</p>";
+        html += "<button onclick=\"mooc_logout(create_menu)\">Log out</button>";
+    }
+    */
     get("menu").innerHTML = html;
     quizzes_answer(my_task,show_answer);
     quizzes_model(my_task,show_model);
